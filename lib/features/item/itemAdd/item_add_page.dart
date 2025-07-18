@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_rainbow_city_app/common/widgets/base_app_bar.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
 class ItemAddlPage extends StatelessWidget {
@@ -9,7 +10,7 @@ class ItemAddlPage extends StatelessWidget {
     final local = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: Text(local.appTitle)),
+      appBar: BaseAppBar(title: local.appTitle),
       body: Center(child: Text('ItemAddlPage')),
     );
   }

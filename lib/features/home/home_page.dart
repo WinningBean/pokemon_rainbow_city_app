@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pokemon_rainbow_city_app/common/widgets/base_app_bar.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/button/app_filled_button.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/button/app_floating_action_button.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/button/app_outlined_button.dart';
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
     final local = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: Text(local.appTitle)),
+      appBar: BaseAppBar(title: local.appTitle),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

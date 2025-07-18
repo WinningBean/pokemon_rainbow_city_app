@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pokemon_rainbow_city_app/common/widgets/base_app_bar.dart';
 import 'package:pokemon_rainbow_city_app/features/item/providers/item_providers.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
@@ -12,7 +13,7 @@ class ItemListPage extends ConsumerWidget {
     final items = ref.watch(itemListProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(local.appTitle)),
+      appBar: BaseAppBar(title: local.appTitle),
       body: ListView(children: items.map((item) => Text(item.name)).toList()),
     );
   }
