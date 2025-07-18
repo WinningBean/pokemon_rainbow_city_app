@@ -23,9 +23,52 @@ Flutter 기반의 포켓몬 테마 앱입니다.
 
 ---
 
-## 🛠 개발 시작 방법
+## 🛠 개발 시작 순서
+
+FVM을 사용하는 프로젝트이므로 아래 순서를 반드시 지켜주세요.
+
+### 1. FVM 설치 (최초 1회만)
 
 ```bash
-flutter pub get
-flutter run
+dart pub global activate fvm
 ```
+
+### 2. 프로젝트에 지정된 Flutter 버전 설치
+
+```bash
+fvm install
+```
+
+> `.fvmrc` 파일에 명시된 Flutter 버전이 자동 설치됩니다.
+
+### 3. FVM 버전 적용
+
+```bash
+fvm use
+```
+
+> 현재 프로젝트 디렉토리에 `.fvm/flutter_sdk`가 연결됩니다.
+
+### 4. 패키지 설치 및 실행
+
+```bash
+fvm flutter pub get
+fvm flutter run
+```
+
+> ⚠️ `flutter` 명령어 앞에는 반드시 `fvm`을 붙여주세요.  
+> (VSCode에서 자동 설정된 경우 제외)
+
+### 5. VSCode 연동 설정 (권장)
+
+`.vscode/settings.json` 파일에 아래 내용 추가:
+
+```json
+{
+  "dart.flutterSdkPath": ".fvm/flutter_sdk"
+}
+```
+
+---
+
+이렇게 하면 모든 팀원이 동일한 Flutter SDK 버전에서 개발할 수 있어 안정적인 협업이 가능합니다.
