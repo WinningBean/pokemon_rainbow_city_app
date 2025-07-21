@@ -75,9 +75,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "insufficientFunds": MessageLookupByLibrary.simpleMessage(
       "Insufficient balance",
     ),
-    "itemListButton": MessageLookupByLibrary.simpleMessage(
-      "Go to Pokemon Shop",
-    ),
     "loadingText": MessageLookupByLibrary.simpleMessage("Loading..."),
     "mainGoToShop": MessageLookupByLibrary.simpleMessage("Go to Pokémon Shop"),
     "mainSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -90,9 +87,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "A network error occurred.",
     ),
     "okText": MessageLookupByLibrary.simpleMessage("Got it"),
-    "onboardingText": MessageLookupByLibrary.simpleMessage(
-      "Before the journey begins,\nshall we buy some Pokémon?",
-    ),
     "paymentCancel": MessageLookupByLibrary.simpleMessage("Payment cancelled"),
     "paymentSuccess": MessageLookupByLibrary.simpleMessage("Payment completed"),
     "pokemonDescriptionLabel": MessageLookupByLibrary.simpleMessage(

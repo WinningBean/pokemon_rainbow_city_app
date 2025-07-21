@@ -56,7 +56,5 @@
   "checkoutButtonHome": "Return to Home",
   "networkErrorText": "A network error occurred.",
   "unknownErrorText": "An unknown error occurred.",
-  "retryText": "Retry",
-  "onboardingText": "Before the journey begins,\nshall we buy some Pokémon?",
-  "itemListButton": "Go to Pokemon Shop"
+  "retryText": "Retry"
 }
