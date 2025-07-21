@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
@@ -15,10 +16,15 @@ class InfoDialog extends StatelessWidget {
     final local = AppLocalizations.of(context)!;
 
     return CupertinoAlertDialog(
-      content: Text(message),
+      content: Text(message, style: Theme.of(context).textTheme.titleSmall),
       actions: [
         CupertinoDialogAction(
-          child: Text(buttonText ?? local.confirmText),
+          child: Text(
+            buttonText ?? local.confirmText,
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.primary),
+          ),
           onPressed: () => context.pop(),
         ),
       ],

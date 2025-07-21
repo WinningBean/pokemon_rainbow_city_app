@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
                 AppOutlinedButton(
                   text: 'itemDetailPage',
                   onChanged: () {
-                    context.pushNamed(RouteNames.itemDetail, pathParameters: {'id': '123'});
+                    context.pushNamed(RouteNames.itemDetail, pathParameters: {'id': '4'});
                   },
                 ),
                 AppFloatingActionButton(
