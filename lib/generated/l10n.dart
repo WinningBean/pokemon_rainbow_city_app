@@ -533,6 +533,26 @@ class S {
   String get retryText {
     return Intl.message('Retry', name: 'retryText', desc: '', args: []);
   }
+
+  /// `Before the journey begins,\nshall we buy some Pokémon?`
+  String get onboardingText {
+    return Intl.message(
+      'Before the journey begins,\nshall we buy some Pokémon?',
+      name: 'onboardingText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go to Pokemon Shop`
+  String get itemListButton {
+    return Intl.message(
+      'Go to Pokemon Shop',
+      name: 'itemListButton',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

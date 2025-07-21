@@ -439,6 +439,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Retry'**
   String get retryText;
+
+  /// No description provided for @onboardingText.
+  ///
+  /// In en, this message translates to:
+  /// **'Before the journey begins,\nshall we buy some Pokémon?'**
+  String get onboardingText;
+
+  /// No description provided for @itemListButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Pokemon Shop'**
+  String get itemListButton;
 }
 
 class _AppLocalizationsDelegate
