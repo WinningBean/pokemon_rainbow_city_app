@@ -8,19 +8,13 @@
   "okText": "알겠어요",
   "closeText": "닫기",
   "loadingText": "로딩 중…",
-  "mainTitle": "무지개 시티 포켓몬 마켓", 
+  "mainTitle": "무지개 시티 포켓몬 마켓",
   "mainSubtitle": "오늘의 포켓몬을 만나보세요!",
   "mainGoToShop": "포켓몬 사러가기",
   "goodsRegistration": "포켓몬을 등록 하시겠습니까?",
   "goodsListTitle": "포켓몬 리스트",
   "goodsSearchHint": "포켓몬 이름으로 검색하세요.",
   "goodsEmptyText": "등록된 포켓몬이 없습니다.",
-  "putGoodsCartText": "장바구니에 담으시겠습니까?",
-  "description": "사용자가 상품을 않았을 때 표시 되는 경고 메시지 입니다.",
-  "detailTitle": "포켓몬 정보",
-  "goodsPriceLabel": "가격",
-  "goodsBuyButton": "바로 구매",
-  "goodsCartButton": "장바구니에 담기",
   "cartTitle": "장바구니",
   "cartEmptyText": "장바구니가 비어있습니다.",
   "cartTotalLabel": "총 합계",
@@ -55,5 +49,41 @@
   "checkoutButtonHome": "홈으로 돌아가기",
   "networkErrorText": "네트워크 오류가 발생했습니다.",
   "unknownErrorText": "알 수 없는 오류가 발생했습니다.",
-  "retryText": "다시 시도"
+  "retryText": "다시 시도",
+  "itemNotFoundText": "아이템이 존재하지 않습니다.",
+  "itemCartButton": "장바구니에 넣기",
+  "itemCartAddedTitle": "상품이 장바구니에 담겼습니다.",
+  "itemCartDialogDesc": "장바구니로 이동하시겠습니까?",
+  "itemMoreBrowse": "더 둘러보기",
+  "itemGoToCart": "장바구니가기",
+  "itemBuyButton": "구매하기",
+  "itemBuyComplete": "{itemName}을(를) {totalPrice}{currency} 만큼 구매하셨습니다.",
+  "@itemBuyComplete": {
+    "description": "구매 완료 메시지. {itemName}은 아이템 이름, {totalPrice}는 금액, {currency}는 통화 기호입니다.",
+    "placeholders": {
+      "itemName": {
+        "type": "String",
+        "example": "피카츄"
+      },
+      "totalPrice": {
+        "type": "String",
+        "example": "3,000"
+      },
+      "currency": {
+        "type": "String",
+        "example": "원"
+      }
+    }
+  },
+  "quantityInputTitle": "수량 입력",
+  "quantityInputError": "1부터 {maxCount} 사이의 숫자만 입력할 수 있습니다.",
+  "@quantityInputError": {
+    "description": "수량 입력 오류 메시지. {maxCount}는 최대 수량입니다.",
+    "placeholders": {
+      "maxCount": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  }
 }

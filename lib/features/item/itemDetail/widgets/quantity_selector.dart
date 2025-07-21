@@ -7,6 +7,7 @@ import 'package:pokemon_rainbow_city_app/common/widgets/dialogs/confirm_dialog.d
 import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/dialogs/info_dialog.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemDetail/providers/item_detail_provider.dart';
+import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
 class QuantitySelector extends ConsumerWidget {
   final int maxCount; // 최대 구매 가능 수량
@@ -43,23 +44,14 @@ class QuantitySelector extends ConsumerWidget {
     );
   }
 
-  void _updateQuantity(BuildContext context, WidgetRef ref, int value, int maxCount) {
-    if (value < 1 || value > maxCount) {
-      showDialog(
-        context: context,
-        builder: (context) => InfoDialog(message: '1부터 $maxCount 사이의 숫자만 입력할 수 있습니다.'),
-      );
-      return;
-    }
-    ref.read(quantityProvider.notifier).state = value;
-  }
-
   void _editQuantity(BuildContext context, WidgetRef ref, int quantity, int maxCount) async {
+    final local = AppLocalizations.of(context)!;
     final controller = TextEditingController(text: quantity.toString());
+
     final newValue = await showDialog<int>(
       context: context,
       builder: (context) => ConfirmDialog(
-        title: '수량 입력',
+        title: local.quantityInputTitle,
         customContent: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -77,5 +69,18 @@ class QuantitySelector extends ConsumerWidget {
     if (newValue != null) {
       _updateQuantity(context, ref, newValue, maxCount);
     }
+  }
+
+  void _updateQuantity(BuildContext context, WidgetRef ref, int value, int maxCount) {
+    final local = AppLocalizations.of(context)!;
+
+    if (value < 1 || value > maxCount) {
+      showDialog(
+        context: context,
+        builder: (context) => InfoDialog(message: local.quantityInputError(maxCount: maxCount)),
+      );
+      return;
+    }
+    ref.read(quantityProvider.notifier).state = value;
   }
 }

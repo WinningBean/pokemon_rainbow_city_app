@@ -20,6 +20,11 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ko';
 
+  static String m0(itemName, totalPrice, currency) =>
+      "${itemName}을(를) ${totalPrice}${currency} 만큼 구매하셨습니다.";
+
+  static String m1(maxCount) => "1부터 ${maxCount} 사이의 숫자만 입력할 수 있습니다.";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("포켓몬 무지개 시티"),
@@ -41,24 +46,28 @@ class MessageLookup extends MessageLookupByLibrary {
     "closeText": MessageLookupByLibrary.simpleMessage("닫기"),
     "confirmRecharge": MessageLookupByLibrary.simpleMessage("이대로 충전하시겠습니까?"),
     "confirmText": MessageLookupByLibrary.simpleMessage("확인"),
-    "description": MessageLookupByLibrary.simpleMessage(
-      "사용자가 상품을 않았을 때 표시 되는 경고 메시지 입니다.",
-    ),
-    "detailTitle": MessageLookupByLibrary.simpleMessage("포켓몬 정보"),
     "fieldRequiredError": MessageLookupByLibrary.simpleMessage(
       "모든 항목을 입력해 주세요.",
     ),
-    "goodsBuyButton": MessageLookupByLibrary.simpleMessage("바로 구매"),
-    "goodsCartButton": MessageLookupByLibrary.simpleMessage("장바구니에 담기"),
     "goodsEmptyText": MessageLookupByLibrary.simpleMessage("등록된 포켓몬이 없습니다."),
     "goodsListTitle": MessageLookupByLibrary.simpleMessage("포켓몬 리스트"),
-    "goodsPriceLabel": MessageLookupByLibrary.simpleMessage("가격"),
     "goodsRegistration": MessageLookupByLibrary.simpleMessage(
       "포켓몬을 등록 하시겠습니까?",
     ),
     "goodsSearchHint": MessageLookupByLibrary.simpleMessage("포켓몬 이름으로 검색하세요."),
-    "goodsUnselected": MessageLookupByLibrary.simpleMessage("선택 안 됨"),
     "insufficientFunds": MessageLookupByLibrary.simpleMessage("잔액이 부족합니다"),
+    "itemBuyButton": MessageLookupByLibrary.simpleMessage("구매하기"),
+    "itemBuyComplete": m0,
+    "itemCartAddedTitle": MessageLookupByLibrary.simpleMessage(
+      "상품이 장바구니에 담겼습니다.",
+    ),
+    "itemCartButton": MessageLookupByLibrary.simpleMessage("장바구니에 넣기"),
+    "itemCartDialogDesc": MessageLookupByLibrary.simpleMessage(
+      "장바구니로 이동하시겠습니까?",
+    ),
+    "itemGoToCart": MessageLookupByLibrary.simpleMessage("장바구니가기"),
+    "itemMoreBrowse": MessageLookupByLibrary.simpleMessage("더 둘러보기"),
+    "itemNotFoundText": MessageLookupByLibrary.simpleMessage("아이템이 존재하지 않습니다."),
     "loadingText": MessageLookupByLibrary.simpleMessage("로딩 중…"),
     "mainGoToShop": MessageLookupByLibrary.simpleMessage("포켓몬 사러가기"),
     "mainSubtitle": MessageLookupByLibrary.simpleMessage("오늘의 포켓몬을 만나보세요!"),
@@ -76,7 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "pokemonTypeLabel": MessageLookupByLibrary.simpleMessage("타입"),
     "pokemonUploadImage": MessageLookupByLibrary.simpleMessage("이미지 업로드"),
     "priceInputHint": MessageLookupByLibrary.simpleMessage("숫자만 입력하세요."),
-    "putGoodsCartText": MessageLookupByLibrary.simpleMessage("장바구니에 담으시겠습니까?"),
+    "quantityInputError": m1,
+    "quantityInputTitle": MessageLookupByLibrary.simpleMessage("수량 입력"),
     "rechargeAmount": MessageLookupByLibrary.simpleMessage("충전할 수량을 선택하세요"),
     "rechargeButton": MessageLookupByLibrary.simpleMessage("충전하기"),
     "rechargeFailed": MessageLookupByLibrary.simpleMessage("충전에 실패했습니다"),

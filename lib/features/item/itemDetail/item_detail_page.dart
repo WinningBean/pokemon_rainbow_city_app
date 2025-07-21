@@ -7,6 +7,7 @@ import 'package:pokemon_rainbow_city_app/features/item/itemDetail/widgets/item_d
 import 'package:pokemon_rainbow_city_app/features/item/itemDetail/widgets/item_detail_info.dart';
 import 'package:pokemon_rainbow_city_app/features/item/models/item.dart';
 import 'package:pokemon_rainbow_city_app/features/item/providers/item_provider.dart';
+import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
 class ItemDetailPage extends ConsumerWidget {
   final int itemId;
@@ -14,12 +15,15 @@ class ItemDetailPage extends ConsumerWidget {
   const ItemDetailPage({super.key, required this.itemId});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final local = AppLocalizations.of(context)!;
     final Item? item = ref.watch(itemByIdProvider(itemId));
 
     if (item == null) {
       return Scaffold(
         appBar: BaseAppBar(actions: [Icon(CustomIcons.cart)]),
-        body: Center(child: Text('아이템이 존재하지 않습니다.', style: Theme.of(context).textTheme.bodyMedium)),
+        body: Center(
+          child: Text(local.itemNotFoundText, style: Theme.of(context).textTheme.bodyMedium),
+        ),
       );
     }
 

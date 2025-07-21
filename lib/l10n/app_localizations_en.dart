@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'Pokkémon Rainbow City';
+  String get appTitle => 'Pokémon Rainbow City';
 
   @override
   String get confirmText => 'Confirm';
@@ -49,27 +49,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get goodsEmptyText => 'No Pokémon available';
-
-  @override
-  String get goodsUnselected => 'No item selected';
-
-  @override
-  String get putGoodsCartText => 'Do you want to add it to the cart?';
-
-  @override
-  String get description => 'This message appears when no item is selected.';
-
-  @override
-  String get detailTitle => 'Pokémon Details';
-
-  @override
-  String get goodsPriceLabel => 'Price';
-
-  @override
-  String get goodsBuyButton => 'Buy Now';
-
-  @override
-  String get goodsCartButton => 'Add to Cart';
 
   @override
   String get cartTitle => 'Cart';
@@ -178,4 +157,42 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get retryText => 'Retry';
+
+  @override
+  String get itemNotFoundText => 'Item does not exist.';
+
+  @override
+  String get itemCartButton => 'Add to Cart';
+
+  @override
+  String get itemCartAddedTitle => 'The item has been added to the cart.';
+
+  @override
+  String get itemCartDialogDesc => 'Would you like to go to your cart?';
+
+  @override
+  String get itemMoreBrowse => 'Browse more';
+
+  @override
+  String get itemGoToCart => 'Go to cart';
+
+  @override
+  String get itemBuyButton => 'Buy';
+
+  @override
+  String itemBuyComplete({
+    required String itemName,
+    required String totalPrice,
+    required String currency,
+  }) {
+    return 'You have purchased $itemName for $totalPrice$currency.';
+  }
+
+  @override
+  String get quantityInputTitle => 'Enter Quantity';
+
+  @override
+  String quantityInputError({required int maxCount}) {
+    return 'Only numbers between 1 and $maxCount are allowed.';
+  }
 }
