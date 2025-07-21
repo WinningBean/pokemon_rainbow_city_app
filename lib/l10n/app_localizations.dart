@@ -115,6 +115,330 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Cancel'**
   String get cancelText;
+
+  /// No description provided for @backText.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get backText;
+
+  /// No description provided for @okText.
+  ///
+  /// In en, this message translates to:
+  /// **'Got it'**
+  String get okText;
+
+  /// No description provided for @closeText.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get closeText;
+
+  /// No description provided for @loadingText.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading...'**
+  String get loadingText;
+
+  /// No description provided for @mainTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rainbow City Pokémon Market'**
+  String get mainTitle;
+
+  /// No description provided for @mainSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover today\'s Pokémon!'**
+  String get mainSubtitle;
+
+  /// No description provided for @mainGoToShop.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Pokémon Shop'**
+  String get mainGoToShop;
+
+  /// No description provided for @goodsRegistration.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to register a Pokémon?'**
+  String get goodsRegistration;
+
+  /// No description provided for @goodsListTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Pokémon List'**
+  String get goodsListTitle;
+
+  /// No description provided for @goodsSearchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search by Pokémon name.'**
+  String get goodsSearchHint;
+
+  /// No description provided for @goodsEmptyText.
+  ///
+  /// In en, this message translates to:
+  /// **'No Pokémon available'**
+  String get goodsEmptyText;
+
+  /// No description provided for @goodsUnselected.
+  ///
+  /// In en, this message translates to:
+  /// **'No item selected'**
+  String get goodsUnselected;
+
+  /// No description provided for @putGoodsCartText.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to add it to the cart?'**
+  String get putGoodsCartText;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'This message appears when no item is selected.'**
+  String get description;
+
+  /// No description provided for @detailTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Pokémon Details'**
+  String get detailTitle;
+
+  /// No description provided for @goodsPriceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Price'**
+  String get goodsPriceLabel;
+
+  /// No description provided for @goodsBuyButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy Now'**
+  String get goodsBuyButton;
+
+  /// No description provided for @goodsCartButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Cart'**
+  String get goodsCartButton;
+
+  /// No description provided for @cartTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Cart'**
+  String get cartTitle;
+
+  /// No description provided for @cartEmptyText.
+  ///
+  /// In en, this message translates to:
+  /// **'Your cart is empty.'**
+  String get cartEmptyText;
+
+  /// No description provided for @cartTotalLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get cartTotalLabel;
+
+  /// No description provided for @cartCheckoutButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Checkout'**
+  String get cartCheckoutButton;
+
+  /// No description provided for @cartRemoveItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove'**
+  String get cartRemoveItem;
+
+  /// No description provided for @registerPokemonTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Register Pokémon'**
+  String get registerPokemonTitle;
+
+  /// No description provided for @registerPokemonSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the details of your Pokémon'**
+  String get registerPokemonSubtitle;
+
+  /// No description provided for @pokemonNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Pokémon Name'**
+  String get pokemonNameLabel;
+
+  /// No description provided for @pokemonTypeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Type'**
+  String get pokemonTypeLabel;
+
+  /// No description provided for @pokemonLevelLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Level'**
+  String get pokemonLevelLabel;
+
+  /// No description provided for @pokemonPriceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Price'**
+  String get pokemonPriceLabel;
+
+  /// No description provided for @pokemonDescriptionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get pokemonDescriptionLabel;
+
+  /// No description provided for @pokemonUploadImage.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload Image'**
+  String get pokemonUploadImage;
+
+  /// No description provided for @submitButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit'**
+  String get submitButton;
+
+  /// No description provided for @cancelButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancelButton;
+
+  /// No description provided for @uploadErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred during registration.'**
+  String get uploadErrorMessage;
+
+  /// No description provided for @fieldRequiredError.
+  ///
+  /// In en, this message translates to:
+  /// **'Please fill out all fields.'**
+  String get fieldRequiredError;
+
+  /// No description provided for @priceInputHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter numbers only.'**
+  String get priceInputHint;
+
+  /// No description provided for @uploadSuccessMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Pokémon has been successfully listed.'**
+  String get uploadSuccessMessage;
+
+  /// No description provided for @candyRechargeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Recharge Candy'**
+  String get candyRechargeTitle;
+
+  /// No description provided for @candyBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Current Balance'**
+  String get candyBalance;
+
+  /// No description provided for @rechargeAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Select amount to recharge'**
+  String get rechargeAmount;
+
+  /// No description provided for @rechargeButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Recharge'**
+  String get rechargeButton;
+
+  /// No description provided for @rechargeSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Candy successfully recharged!'**
+  String get rechargeSuccess;
+
+  /// No description provided for @rechargeFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Recharge failed'**
+  String get rechargeFailed;
+
+  /// No description provided for @insufficientFunds.
+  ///
+  /// In en, this message translates to:
+  /// **'Insufficient balance'**
+  String get insufficientFunds;
+
+  /// No description provided for @selectPaymentMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Payment Method'**
+  String get selectPaymentMethod;
+
+  /// No description provided for @paymentSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment completed'**
+  String get paymentSuccess;
+
+  /// No description provided for @paymentCancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment cancelled'**
+  String get paymentCancel;
+
+  /// No description provided for @confirmRecharge.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to proceed with recharge?'**
+  String get confirmRecharge;
+
+  /// No description provided for @checkoutSuccessTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchase Complete!'**
+  String get checkoutSuccessTitle;
+
+  /// No description provided for @checkoutSuccessDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Pokémon will be delivered soon.'**
+  String get checkoutSuccessDesc;
+
+  /// No description provided for @checkoutButtonHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Return to Home'**
+  String get checkoutButtonHome;
+
+  /// No description provided for @networkErrorText.
+  ///
+  /// In en, this message translates to:
+  /// **'A network error occurred.'**
+  String get networkErrorText;
+
+  /// No description provided for @unknownErrorText.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error occurred.'**
+  String get unknownErrorText;
+
+  /// No description provided for @retryText.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retryText;
 }
 
 class _AppLocalizationsDelegate
