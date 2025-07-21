@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemDetail/widgets/item_bottom_buttons.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemDetail/widgets/price_display.dart';
+import 'package:pokemon_rainbow_city_app/features/item/models/item.dart';
 
 class ItemDetailBottomBar extends StatelessWidget {
-  final double itemPrice;
+  final Item item;
 
-  const ItemDetailBottomBar({super.key, required this.itemPrice});
+  const ItemDetailBottomBar({super.key, required this.item});
 
   static double get height => PriceDisplay.height + ItemBottomButtons.height;
 
@@ -20,8 +21,8 @@ class ItemDetailBottomBar extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          PriceDisplay(itemPrice: itemPrice),
-          ItemBottomButtons(),
+          PriceDisplay(item: item),
+          ItemBottomButtons(item: item),
         ],
       ),
     );

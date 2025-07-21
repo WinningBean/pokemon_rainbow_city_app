@@ -9,14 +9,16 @@ class ConfirmDialog extends StatelessWidget {
   const ConfirmDialog({
     super.key,
     required this.title,
-    required this.content,
+    this.contenText,
+    this.customContent,
     required this.onConfirm,
     this.onCancel,
     this.confirmText,
     this.cancelText,
   });
   final String title;
-  final String content;
+  final String? contenText;
+  final Widget? customContent;
   final VoidCallback onConfirm;
   final VoidCallback? onCancel;
   final String? confirmText;
@@ -28,7 +30,11 @@ class ConfirmDialog extends StatelessWidget {
 
     return CupertinoAlertDialog(
       title: Text(title, style: Theme.of(context).textTheme.titleSmall),
-      content: Text(content, style: Theme.of(context).textTheme.bodySmall),
+      content:
+          customContent ??
+          (contenText == null
+              ? null
+              : Text(contenText!, style: Theme.of(context).textTheme.bodySmall)),
       actions: [
         CupertinoDialogAction(
           isDestructiveAction: true,

@@ -30,7 +30,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       actionsPadding: EdgeInsets.symmetric(horizontal: contentPadding),
       titleSpacing: contentPadding,
       centerTitle: centerTitle,
-      automaticallyImplyLeading: false,
+      automaticallyImplyLeading: automaticallyImplyLeading,
       leading: (automaticallyImplyLeading && GoRouter.of(context).canPop())
           ? IconButton(icon: const Icon(CustomIcons.chevronLeft), onPressed: () => context.pop())
           : null,

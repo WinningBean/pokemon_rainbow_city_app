@@ -4,7 +4,6 @@ import 'package:pokemon_rainbow_city_app/features/item/models/item.dart';
 
 class ItemDetailInfo extends StatelessWidget {
   final Item item;
-
   const ItemDetailInfo({super.key, required this.item});
 
   @override

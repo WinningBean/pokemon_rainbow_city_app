@@ -1,33 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pokemon_rainbow_city_app/common/utils/price_formatter.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemDetail/widgets/quantity_selector.dart';
+import 'package:pokemon_rainbow_city_app/features/item/itemDetail/providers/item_detail_provider.dart';
+import 'package:pokemon_rainbow_city_app/features/item/models/item.dart';
 
-class PriceDisplay extends StatelessWidget {
+class PriceDisplay extends ConsumerWidget {
   static const double _sectionHeight = 54;
   static double get height => _sectionHeight;
 
-  final double itemPrice;
-
-  const PriceDisplay({super.key, required this.itemPrice});
+  final Item item;
+  const PriceDisplay({super.key, required this.item});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final locale = Localizations.localeOf(context).toString();
-    final isKorean = locale.startsWith('ko');
-
-    final numberFormat = NumberFormat.simpleCurrency(locale: locale);
-    final symbol = isKorean ? '원' : numberFormat.currencySymbol;
-    final formattedPrice = numberFormat
-        .format(itemPrice)
-        .replaceAll(numberFormat.currencySymbol, '')
-        .trim();
-    final currencyLabel = symbol;
+    final totalPrice = ref.watch(totalPriceProvider(item));
 
     return SizedBox(
       height: _sectionHeight,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [QuantitySelector(), _buildPriceAmount(context, formattedPrice, currencyLabel)],
+        children: [
+          QuantitySelector(maxCount: item.count),
+          _buildPriceAmount(
+            context,
+            formatPriceValue(totalPrice, locale),
+            getCurrencySymbol(locale),
+          ),
+        ],
       ),
     );
   }
