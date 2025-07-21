@@ -23,7 +23,113 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Pokkémon Rainbow City"),
+    "backText": MessageLookupByLibrary.simpleMessage("Back"),
+    "cancelButton": MessageLookupByLibrary.simpleMessage("Cancel"),
     "cancelText": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "candyBalance": MessageLookupByLibrary.simpleMessage("Current Balance"),
+    "candyRechargeTitle": MessageLookupByLibrary.simpleMessage(
+      "Recharge Candy",
+    ),
+    "cartCheckoutButton": MessageLookupByLibrary.simpleMessage("Checkout"),
+    "cartEmptyText": MessageLookupByLibrary.simpleMessage(
+      "Your cart is empty.",
+    ),
+    "cartRemoveItem": MessageLookupByLibrary.simpleMessage("Remove"),
+    "cartTitle": MessageLookupByLibrary.simpleMessage("Cart"),
+    "cartTotalLabel": MessageLookupByLibrary.simpleMessage("Total"),
+    "checkoutButtonHome": MessageLookupByLibrary.simpleMessage(
+      "Return to Home",
+    ),
+    "checkoutSuccessDesc": MessageLookupByLibrary.simpleMessage(
+      "Your Pokémon will be delivered soon.",
+    ),
+    "checkoutSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Purchase Complete!",
+    ),
+    "closeText": MessageLookupByLibrary.simpleMessage("Close"),
+    "confirmRecharge": MessageLookupByLibrary.simpleMessage(
+      "Do you want to proceed with recharge?",
+    ),
     "confirmText": MessageLookupByLibrary.simpleMessage("Confirm"),
+    "description": MessageLookupByLibrary.simpleMessage(
+      "This message appears when no item is selected.",
+    ),
+    "detailTitle": MessageLookupByLibrary.simpleMessage("Pokémon Details"),
+    "fieldRequiredError": MessageLookupByLibrary.simpleMessage(
+      "Please fill out all fields.",
+    ),
+    "goodsBuyButton": MessageLookupByLibrary.simpleMessage("Buy Now"),
+    "goodsCartButton": MessageLookupByLibrary.simpleMessage("Add to Cart"),
+    "goodsEmptyText": MessageLookupByLibrary.simpleMessage(
+      "No Pokémon available",
+    ),
+    "goodsListTitle": MessageLookupByLibrary.simpleMessage("Pokémon List"),
+    "goodsPriceLabel": MessageLookupByLibrary.simpleMessage("Price"),
+    "goodsRegistration": MessageLookupByLibrary.simpleMessage(
+      "Do you want to register a Pokémon?",
+    ),
+    "goodsSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Search by Pokémon name.",
+    ),
+    "goodsUnselected": MessageLookupByLibrary.simpleMessage("No item selected"),
+    "insufficientFunds": MessageLookupByLibrary.simpleMessage(
+      "Insufficient balance",
+    ),
+    "loadingText": MessageLookupByLibrary.simpleMessage("Loading..."),
+    "mainGoToShop": MessageLookupByLibrary.simpleMessage("Go to Pokémon Shop"),
+    "mainSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Discover today\'s Pokémon!",
+    ),
+    "mainTitle": MessageLookupByLibrary.simpleMessage(
+      "Rainbow City Pokémon Market",
+    ),
+    "networkErrorText": MessageLookupByLibrary.simpleMessage(
+      "A network error occurred.",
+    ),
+    "okText": MessageLookupByLibrary.simpleMessage("Got it"),
+    "paymentCancel": MessageLookupByLibrary.simpleMessage("Payment cancelled"),
+    "paymentSuccess": MessageLookupByLibrary.simpleMessage("Payment completed"),
+    "pokemonDescriptionLabel": MessageLookupByLibrary.simpleMessage(
+      "Description",
+    ),
+    "pokemonLevelLabel": MessageLookupByLibrary.simpleMessage("Level"),
+    "pokemonNameLabel": MessageLookupByLibrary.simpleMessage("Pokémon Name"),
+    "pokemonPriceLabel": MessageLookupByLibrary.simpleMessage("Price"),
+    "pokemonTypeLabel": MessageLookupByLibrary.simpleMessage("Type"),
+    "pokemonUploadImage": MessageLookupByLibrary.simpleMessage("Upload Image"),
+    "priceInputHint": MessageLookupByLibrary.simpleMessage(
+      "Enter numbers only.",
+    ),
+    "putGoodsCartText": MessageLookupByLibrary.simpleMessage(
+      "Do you want to add it to the cart?",
+    ),
+    "rechargeAmount": MessageLookupByLibrary.simpleMessage(
+      "Select amount to recharge",
+    ),
+    "rechargeButton": MessageLookupByLibrary.simpleMessage("Recharge"),
+    "rechargeFailed": MessageLookupByLibrary.simpleMessage("Recharge failed"),
+    "rechargeSuccess": MessageLookupByLibrary.simpleMessage(
+      "Candy successfully recharged!",
+    ),
+    "registerPokemonSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Enter the details of your Pokémon",
+    ),
+    "registerPokemonTitle": MessageLookupByLibrary.simpleMessage(
+      "Register Pokémon",
+    ),
+    "retryText": MessageLookupByLibrary.simpleMessage("Retry"),
+    "selectPaymentMethod": MessageLookupByLibrary.simpleMessage(
+      "Select Payment Method",
+    ),
+    "submitButton": MessageLookupByLibrary.simpleMessage("Submit"),
+    "unknownErrorText": MessageLookupByLibrary.simpleMessage(
+      "An unknown error occurred.",
+    ),
+    "uploadErrorMessage": MessageLookupByLibrary.simpleMessage(
+      "An error occurred during registration.",
+    ),
+    "uploadSuccessMessage": MessageLookupByLibrary.simpleMessage(
+      "Pokémon has been successfully listed.",
+    ),
   };
 }
