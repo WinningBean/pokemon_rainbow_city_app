@@ -195,4 +195,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String quantityInputError({required int maxCount}) {
     return 'Only numbers between 1 and $maxCount are allowed.';
   }
+
+  @override
+  String get itemRemainingCountLabel => 'Remaining quantity:';
 }

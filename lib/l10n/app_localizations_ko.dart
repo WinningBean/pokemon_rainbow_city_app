@@ -159,7 +159,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get retryText => '다시 시도';
 
   @override
-  String get itemNotFoundText => '아이템이 존재하지 않습니다.';
+  String get itemNotFoundText => '상품이 존재하지 않습니다.';
 
   @override
   String get itemCartButton => '장바구니에 넣기';
@@ -195,4 +195,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String quantityInputError({required int maxCount}) {
     return '1부터 $maxCount 사이의 숫자만 입력할 수 있습니다.';
   }
+
+  @override
+  String get itemRemainingCountLabel => '남은 수량 :';
 }

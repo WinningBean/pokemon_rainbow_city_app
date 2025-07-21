@@ -87,6 +87,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "itemNotFoundText": MessageLookupByLibrary.simpleMessage(
       "Item does not exist.",
     ),
+    "itemRemainingCountLabel": MessageLookupByLibrary.simpleMessage(
+      "Remaining quantity:",
+    ),
     "loadingText": MessageLookupByLibrary.simpleMessage("Loading..."),
     "mainGoToShop": MessageLookupByLibrary.simpleMessage("Go to Pokémon Shop"),
     "mainSubtitle": MessageLookupByLibrary.simpleMessage(

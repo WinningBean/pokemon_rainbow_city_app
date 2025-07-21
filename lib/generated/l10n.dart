@@ -565,6 +565,16 @@ class S {
       args: [maxCount],
     );
   }
+
+  /// `Remaining quantity:`
+  String get itemRemainingCountLabel {
+    return Intl.message(
+      'Remaining quantity:',
+      name: 'itemRemainingCountLabel',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

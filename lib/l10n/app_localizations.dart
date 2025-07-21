@@ -461,6 +461,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Only numbers between 1 and {maxCount} are allowed.'**
   String quantityInputError({required int maxCount});
+
+  /// No description provided for @itemRemainingCountLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Remaining quantity:'**
+  String get itemRemainingCountLabel;
 }
 
 class _AppLocalizationsDelegate
