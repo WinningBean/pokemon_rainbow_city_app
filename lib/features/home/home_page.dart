@@ -8,7 +8,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final local = AppLocalizations.of(context)!;
-    final screenWidth = MediaQuery.of(context).size.width;
+
+    final size = MediaQuery.of(context).size;
+    final screenWidth = size.width;
+    final screenHeight = size.height;
 
     return Scaffold(
       backgroundColor: const Color(0xFFFFF5F5),
@@ -17,90 +20,93 @@ class HomePage extends StatelessWidget {
           children: [
             // 오박사 이미지
             Positioned(
-              top: 150,
+              top: screenHeight * 0.175,
               left: 0,
               right: 0,
-              child: Center(
-                child: Image.asset(
-                  'assets/images/professor.png',
-                  width: screenWidth,
-                  fit: BoxFit.contain,
-                ),
+              child: Image.asset(
+                'assets/images/professor.png',
+                width: screenWidth * 0.8,
+                fit: BoxFit.contain,
               ),
             ),
 
-            // 온보딩 웰컴 텍스트박스
+            // 온보딩 텍스트 박스
             Positioned(
               top: 50,
-              left: (screenWidth - 344) / 2,
+              left: 29,
+              right: 29,
               child: Container(
-                width: 344,
-                height: 130,
-                padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
+                width: MediaQuery.of(context).size.width - 58,
+                padding: EdgeInsets.symmetric(vertical: 25),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(color: const Color(0xFF8E51FF), width: 1),
                 ),
-                child: Center(
-                  child: Text(
-                    '여행을 시작하기 전에 포켓몬을 사러가볼까?',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'PFStardust',
-                      color: const Color(0xFF8E51FF),
-                      height: 1.2,
-                    ),
-                    textAlign: TextAlign.center,
+                child: Text(
+                  '여행을 시작하기 전에\n포켓몬을 사러가볼까?',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'PFStardust',
+                    color: const Color(0xFF8E51FF),
+                    height: 1.2,
                   ),
+                  textAlign: TextAlign.center,
+                  softWrap: true,
                 ),
               ),
             ),
 
-            // 마스터볼 이미지 버튼
+            // 마스터볼 + 말풍선
             Positioned(
               bottom: 0,
-              left: (screenWidth - 240) / 2,
-              child: GestureDetector(
-                onTap: () {
-                  context.push('/items');
-                },
-                child: Image.asset(
-                  'assets/images/masterball.png',
-                  width: 240,
-                  height: 240,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-
-            // 말풍선 이미지 (텍스트 포함)
-            Positioned(
-              top: 530,
-              left: 168,
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image.asset(
-                    'assets/images/textbox.png',
-                    width: 160,
-                    height: 92,
-                    fit: BoxFit.contain,
-                  ),
-                  Transform.translate(
-                    offset: const Offset(-2, -6),
-                    child: const Text(
-                      '포켓몬 사러가기',
-                      style: TextStyle(
-                        fontFamily: 'PFStardust',
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.deepPurple,
+              left: (screenWidth - screenWidth * 0.6) / 2,
+              child: SizedBox(
+                width: screenWidth * 0.6,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  alignment: Alignment.bottomCenter,
+                  children: [
+                    // 마스터볼 버튼
+                    GestureDetector(
+                      onTap: () => context.push('/items'),
+                      child: Image.asset(
+                        'assets/images/masterball.png',
+                        width: screenWidth * 0.6,
+                        fit: BoxFit.contain,
                       ),
-                      textAlign: TextAlign.center,
                     ),
-                  ),
-                ],
+                    // 말풍선 이미지
+                    Positioned(
+                      bottom: screenWidth * 0.45, // 마스터볼 위로 띄움
+                      right: -screenWidth * 0.05, // 오른쪽으로 살짝 치우침
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/textbox.png',
+                            width: screenWidth * 0.42,
+                            fit: BoxFit.contain,
+                          ),
+                          // 텍스트 위치 보정
+                          Transform.translate(
+                            offset: Offset(0, -screenWidth * 0.02),
+                            child: Text(
+                              '포켓몬 사러가기',
+                              style: TextStyle(
+                                fontFamily: 'PFStardust',
+                                fontSize: screenWidth * 0.045,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.deepPurple,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
