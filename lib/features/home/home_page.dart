@@ -18,43 +18,27 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            // 오박사 이미지
+            // 배경 이미지
+            Positioned.fill(child: Image.asset('assets/images/background.png', fit: BoxFit.cover)),
+
+            // 로켓단 이미지
             Positioned(
-              top: screenHeight * 0.175,
+              top: screenHeight * 0.005,
               left: 0,
               right: 0,
               child: Image.asset(
-                'assets/images/professor.png',
+                'assets/images/rocket.png',
                 width: screenWidth * 0.8,
                 fit: BoxFit.contain,
               ),
             ),
 
-            // 온보딩 텍스트 박스
+            // 타이틀 이미지
             Positioned(
               top: 50,
-              left: 29,
-              right: 29,
-              child: Container(
-                width: MediaQuery.of(context).size.width - 58,
-                padding: EdgeInsets.symmetric(vertical: 25),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: const Color(0xFF8E51FF), width: 1),
-                ),
-                child: Text(
-                  '여행을 시작하기 전에\n포켓몬을 사러가볼까?',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'PFStardust',
-                    color: const Color(0xFF8E51FF),
-                    height: 1.2,
-                  ),
-                  textAlign: TextAlign.center,
-                  softWrap: true,
-                ),
-              ),
+              left: screenWidth * 0.1,
+              right: screenWidth * 0.1,
+              child: Image.asset('assets/images/title.png', fit: BoxFit.contain),
             ),
 
             // 마스터볼 + 말풍선
@@ -67,7 +51,6 @@ class HomePage extends StatelessWidget {
                   clipBehavior: Clip.none,
                   alignment: Alignment.bottomCenter,
                   children: [
-                    // 마스터볼 버튼
                     GestureDetector(
                       onTap: () => context.push('/items'),
                       child: Image.asset(
@@ -76,10 +59,9 @@ class HomePage extends StatelessWidget {
                         fit: BoxFit.contain,
                       ),
                     ),
-                    // 말풍선 이미지
                     Positioned(
-                      bottom: screenWidth * 0.45, // 마스터볼 위로 띄움
-                      right: -screenWidth * 0.05, // 오른쪽으로 살짝 치우침
+                      bottom: screenWidth * 0.45,
+                      right: -screenWidth * 0.05,
                       child: Stack(
                         alignment: Alignment.center,
                         children: [
@@ -88,7 +70,6 @@ class HomePage extends StatelessWidget {
                             width: screenWidth * 0.42,
                             fit: BoxFit.contain,
                           ),
-                          // 텍스트 위치 보정
                           Transform.translate(
                             offset: Offset(0, -screenWidth * 0.02),
                             child: Text(
