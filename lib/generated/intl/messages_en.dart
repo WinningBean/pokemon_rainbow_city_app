@@ -60,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "fieldRequiredError": MessageLookupByLibrary.simpleMessage(
       "Please fill out all fields.",
     ),
+    "goToShop": MessageLookupByLibrary.simpleMessage("Go buy Pokémon"),
     "goodsEmptyText": MessageLookupByLibrary.simpleMessage(
       "No Pokémon available",
     ),
@@ -102,6 +103,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "A network error occurred.",
     ),
     "okText": MessageLookupByLibrary.simpleMessage("Got it"),
+    "onboardingText": MessageLookupByLibrary.simpleMessage(
+      "Shall we go buy some Pokémon before we start our journey?",
+    ),
     "paymentCancel": MessageLookupByLibrary.simpleMessage("Payment cancelled"),
     "paymentSuccess": MessageLookupByLibrary.simpleMessage("Payment completed"),
     "pokemonDescriptionLabel": MessageLookupByLibrary.simpleMessage(

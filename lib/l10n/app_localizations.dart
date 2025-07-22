@@ -398,6 +398,18 @@ abstract class AppLocalizations {
   /// **'Retry'**
   String get retryText;
 
+  /// No description provided for @onboardingText.
+  ///
+  /// In en, this message translates to:
+  /// **'Shall we go buy some Pokémon before we start our journey?'**
+  String get onboardingText;
+
+  /// No description provided for @goToShop.
+  ///
+  /// In en, this message translates to:
+  /// **'Go buy Pokémon'**
+  String get goToShop;
+
   /// No description provided for @itemNotFoundText.
   ///
   /// In en, this message translates to:

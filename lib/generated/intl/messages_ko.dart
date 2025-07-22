@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "fieldRequiredError": MessageLookupByLibrary.simpleMessage(
       "모든 항목을 입력해 주세요.",
     ),
+    "goToShop": MessageLookupByLibrary.simpleMessage("포켓몬 사러가기"),
     "goodsEmptyText": MessageLookupByLibrary.simpleMessage("등록된 포켓몬이 없습니다."),
     "goodsListTitle": MessageLookupByLibrary.simpleMessage("포켓몬 리스트"),
     "goodsRegistration": MessageLookupByLibrary.simpleMessage(
@@ -77,6 +78,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "네트워크 오류가 발생했습니다.",
     ),
     "okText": MessageLookupByLibrary.simpleMessage("알겠어요"),
+    "onboardingText": MessageLookupByLibrary.simpleMessage(
+      "여행을 시작하기 전에 포켓몬을 사러가볼까?",
+    ),
     "paymentCancel": MessageLookupByLibrary.simpleMessage("결제가 취소되었습니다"),
     "paymentSuccess": MessageLookupByLibrary.simpleMessage("결제가 완료되었습니다"),
     "pokemonDescriptionLabel": MessageLookupByLibrary.simpleMessage("설명"),

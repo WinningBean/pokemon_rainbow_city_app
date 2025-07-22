@@ -474,6 +474,21 @@ class S {
     return Intl.message('Retry', name: 'retryText', desc: '', args: []);
   }
 
+  /// `Shall we go buy some Pokémon before we start our journey?`
+  String get onboardingText {
+    return Intl.message(
+      'Shall we go buy some Pokémon before we start our journey?',
+      name: 'onboardingText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go buy Pokémon`
+  String get goToShop {
+    return Intl.message('Go buy Pokémon', name: 'goToShop', desc: '', args: []);
+  }
+
   /// `Item does not exist.`
   String get itemNotFoundText {
     return Intl.message(

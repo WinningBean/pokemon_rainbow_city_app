@@ -159,6 +159,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get retryText => 'Retry';
 
   @override
+  String get onboardingText =>
+      'Shall we go buy some Pokémon before we start our journey?';
+
+  @override
+  String get goToShop => 'Go buy Pokémon';
+
+  @override
   String get itemNotFoundText => 'Item does not exist.';
 
   @override

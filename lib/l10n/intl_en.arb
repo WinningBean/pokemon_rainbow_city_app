@@ -50,6 +50,8 @@
   "networkErrorText": "A network error occurred.",
   "unknownErrorText": "An unknown error occurred.",
   "retryText": "Retry",
+  "onboardingText": "Shall we go buy some Pokémon before we start our journey?",
+  "goToShop": "Go buy Pokémon",
   "itemNotFoundText": "Item does not exist.",
   "itemCartButton": "Add to Cart",
   "itemCartAddedTitle": "The item has been added to the cart.",

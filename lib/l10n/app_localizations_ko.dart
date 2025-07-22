@@ -159,6 +159,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get retryText => '다시 시도';
 
   @override
+  String get onboardingText => '여행을 시작하기 전에 포켓몬을 사러가볼까?';
+
+  @override
+  String get goToShop => '포켓몬 사러가기';
+
+  @override
   String get itemNotFoundText => '상품이 존재하지 않습니다.';
 
   @override
