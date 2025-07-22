@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
 
 /// 기본 AppBar 위젯
@@ -9,8 +10,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget>? actions;
   final bool centerTitle;
   final bool automaticallyImplyLeading;
-  final EdgeInsetsGeometry contentPadding;
-  final double iconSize;
+  final double contentPadding;
   final Color? backgroundColor;
 
   const BaseAppBar({
@@ -19,31 +19,26 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.actions,
     this.centerTitle = true,
     this.automaticallyImplyLeading = true,
-    this.contentPadding = const EdgeInsets.symmetric(horizontal: 16.0),
-    this.iconSize = 24.0,
+    this.contentPadding = 16.0,
     this.backgroundColor,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: contentPadding,
-      child: AppBar(
-        title: title != null ? Text(title!) : null,
-        centerTitle: centerTitle,
-        automaticallyImplyLeading: automaticallyImplyLeading,
-        leading: automaticallyImplyLeading && Navigator.canPop(context)
-            ? IconButton(
-                icon: const Icon(CustomIcons.chevronLeft),
-                onPressed: () => Navigator.of(context).maybePop(),
-              )
-            : null,
-        actions: actions,
-        backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.surface,
-        iconTheme: IconThemeData(size: iconSize),
-        titleTextStyle: Theme.of(context).textTheme.titleLarge,
-        elevation: 0,
-      ),
+    return AppBar(
+      title: title != null ? Text(title!) : null,
+      actionsPadding: EdgeInsets.symmetric(horizontal: contentPadding),
+      titleSpacing: contentPadding,
+      centerTitle: centerTitle,
+      automaticallyImplyLeading: automaticallyImplyLeading,
+      leading: (automaticallyImplyLeading && GoRouter.of(context).canPop())
+          ? IconButton(icon: const Icon(CustomIcons.chevronLeft), onPressed: () => context.pop())
+          : null,
+      actions: actions,
+      backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.surface,
+      iconTheme: IconThemeData(size: 24.0),
+      titleTextStyle: Theme.of(context).textTheme.titleLarge,
+      elevation: 0,
     );
   }
 
