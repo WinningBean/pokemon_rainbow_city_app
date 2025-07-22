@@ -37,6 +37,12 @@ class ItemListPage extends ConsumerWidget {
         },
         separatorBuilder: (_, __) => const SizedBox(height: 20),
       ),
+      floatingActionButton: AppFloatingActionButton(
+        icon: Icons.add,
+        onChanged: () {
+          context.pushNamed(RouteNames.itemAdd);
+        },
+      ),
     );
   }
 }

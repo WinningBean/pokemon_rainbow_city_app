@@ -8,11 +8,7 @@ import 'route_names.dart';
 final GoRouter appRouter = GoRouter(
   initialLocation: '/home',
   routes: [
-    GoRoute(
-      name: RouteNames.home,
-      path: '/home',
-      builder: (context, state) => const HomePage(),
-    ),
+    GoRoute(name: RouteNames.home, path: '/home', builder: (context, state) => const HomePage()),
     GoRoute(
       name: RouteNames.itemAdd,
       path: '/item/add',
@@ -31,7 +27,13 @@ final GoRouter appRouter = GoRouter(
         if (idStr == null) {
           throw Exception('Missing path parameter: id');
         }
-        final int id = int.parse(idStr);
+
+        // int 파싱 예외 처리
+        final id = int.tryParse(idStr);
+        if (id == null) {
+          throw Exception('Invalid id format: must be an integer');
+        }
+
         return ItemDetailPage(itemId: id);
       },
     ),
