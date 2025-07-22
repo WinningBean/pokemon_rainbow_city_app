@@ -39,33 +39,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "cartTitle": MessageLookupByLibrary.simpleMessage("장바구니"),
     "cartTotalLabel": MessageLookupByLibrary.simpleMessage("총 합계"),
     "checkoutButtonHome": MessageLookupByLibrary.simpleMessage("홈으로 돌아가기"),
-    "checkoutSuccessDesc": MessageLookupByLibrary.simpleMessage(
-      "포켓몬이 곧 배달됩니다.",
-    ),
+    "checkoutSuccessDesc": MessageLookupByLibrary.simpleMessage("포켓몬이 곧 배달됩니다."),
     "checkoutSuccessTitle": MessageLookupByLibrary.simpleMessage("결제 완료!"),
     "closeText": MessageLookupByLibrary.simpleMessage("닫기"),
     "confirmRecharge": MessageLookupByLibrary.simpleMessage("이대로 충전하시겠습니까?"),
     "confirmText": MessageLookupByLibrary.simpleMessage("확인"),
-    "fieldRequiredError": MessageLookupByLibrary.simpleMessage(
-      "모든 항목을 입력해 주세요.",
-    ),
+    "fieldRequiredError": MessageLookupByLibrary.simpleMessage("모든 항목을 입력해 주세요."),
     "goToShop": MessageLookupByLibrary.simpleMessage("포켓몬 사러가기"),
     "goodsEmptyText": MessageLookupByLibrary.simpleMessage("등록된 포켓몬이 없습니다."),
     "goodsListTitle": MessageLookupByLibrary.simpleMessage("포켓몬 리스트"),
-    "goodsRegistration": MessageLookupByLibrary.simpleMessage(
-      "포켓몬을 등록 하시겠습니까?",
-    ),
+    "goodsRegistration": MessageLookupByLibrary.simpleMessage("포켓몬을 등록 하시겠습니까?"),
     "goodsSearchHint": MessageLookupByLibrary.simpleMessage("포켓몬 이름으로 검색하세요."),
     "insufficientFunds": MessageLookupByLibrary.simpleMessage("잔액이 부족합니다"),
     "itemBuyButton": MessageLookupByLibrary.simpleMessage("구매하기"),
     "itemBuyComplete": m0,
-    "itemCartAddedTitle": MessageLookupByLibrary.simpleMessage(
-      "상품이 장바구니에 담겼습니다.",
-    ),
+    "itemCartAddedTitle": MessageLookupByLibrary.simpleMessage("상품이 장바구니에 담겼습니다."),
     "itemCartButton": MessageLookupByLibrary.simpleMessage("장바구니에 넣기"),
-    "itemCartDialogDesc": MessageLookupByLibrary.simpleMessage(
-      "장바구니로 이동하시겠습니까?",
-    ),
+    "itemCartDialogDesc": MessageLookupByLibrary.simpleMessage("장바구니로 이동하시겠습니까?"),
     "itemGoToCart": MessageLookupByLibrary.simpleMessage("장바구니가기"),
     "itemListEmptyText": MessageLookupByLibrary.simpleMessage("상품 목록이 없습니다."),
     "itemMoreBrowse": MessageLookupByLibrary.simpleMessage("더 둘러보기"),
@@ -75,13 +65,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "mainGoToShop": MessageLookupByLibrary.simpleMessage("포켓몬 사러가기"),
     "mainSubtitle": MessageLookupByLibrary.simpleMessage("오늘의 포켓몬을 만나보세요!"),
     "mainTitle": MessageLookupByLibrary.simpleMessage("무지개 시티 포켓몬 마켓"),
-    "networkErrorText": MessageLookupByLibrary.simpleMessage(
-      "네트워크 오류가 발생했습니다.",
-    ),
+    "networkErrorText": MessageLookupByLibrary.simpleMessage("네트워크 오류가 발생했습니다."),
     "okText": MessageLookupByLibrary.simpleMessage("알겠어요"),
-    "onboardingText": MessageLookupByLibrary.simpleMessage(
-      "여행을 시작하기 전에 포켓몬을 사러가볼까?",
-    ),
+    "onboardingText": MessageLookupByLibrary.simpleMessage("여행을 시작하기 전에 포켓몬을 사러가볼까?"),
     "paymentCancel": MessageLookupByLibrary.simpleMessage("결제가 취소되었습니다"),
     "paymentSuccess": MessageLookupByLibrary.simpleMessage("결제가 완료되었습니다"),
     "pokemonDescriptionLabel": MessageLookupByLibrary.simpleMessage("설명"),
@@ -97,18 +83,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "rechargeButton": MessageLookupByLibrary.simpleMessage("충전하기"),
     "rechargeFailed": MessageLookupByLibrary.simpleMessage("충전에 실패했습니다"),
     "rechargeSuccess": MessageLookupByLibrary.simpleMessage("사탕이 충전되었습니다!"),
-    "registerPokemonSubtitle": MessageLookupByLibrary.simpleMessage(
-      "판매할 포켓몬 정보를 입력하세요.",
-    ),
+    "registerPokemonSubtitle": MessageLookupByLibrary.simpleMessage("판매할 포켓몬 정보를 입력하세요."),
     "registerPokemonTitle": MessageLookupByLibrary.simpleMessage("포켓몬 등록"),
     "retryText": MessageLookupByLibrary.simpleMessage("다시 시도"),
     "selectPaymentMethod": MessageLookupByLibrary.simpleMessage("결제 수단 선택"),
     "submitButton": MessageLookupByLibrary.simpleMessage("등록하기"),
-    "unknownErrorText": MessageLookupByLibrary.simpleMessage(
-      "알 수 없는 오류가 발생했습니다.",
-    ),
-    "uploadErrorMessage": MessageLookupByLibrary.simpleMessage(
-      "등록 중 오류가 발생했습니다.",
-    ),
+    "unknownErrorText": MessageLookupByLibrary.simpleMessage("알 수 없는 오류가 발생했습니다."),
+    "uploadErrorMessage": MessageLookupByLibrary.simpleMessage("등록 중 오류가 발생했습니다."),
   };
 }
