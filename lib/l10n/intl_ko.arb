@@ -89,5 +89,6 @@
     }
   },
   "itemRemainingCountLabel": "남은 수량 :",
-  "itemListEmptyText": "상품 목록이 없습니다."
+  "itemListEmptyText": "상품 목록이 없습니다.",
+  "searchHintText": "검색어를 입력해주세요."
 }

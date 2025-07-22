@@ -89,5 +89,6 @@
     }
   },
   "itemRemainingCountLabel": "Remaining quantity:",
-  "itemListEmptyText": "No items available."
+  "itemListEmptyText": "No items available.",
+  "searchHintText": "Enter search term."
 }

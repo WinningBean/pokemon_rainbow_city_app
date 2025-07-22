@@ -485,6 +485,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No items available.'**
   String get itemListEmptyText;
+
+  /// No description provided for @searchHintText.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter search term.'**
+  String get searchHintText;
 }
 
 class _AppLocalizationsDelegate

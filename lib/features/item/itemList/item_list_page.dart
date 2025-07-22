@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pokemon_rainbow_city_app/common/widgets/base_app_bar.dart';
+import 'package:pokemon_rainbow_city_app/common/widgets/appBar/base_app_bar.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/button/app_floating_action_button.dart';
 import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
 import 'package:pokemon_rainbow_city_app/core/navigation/route_names.dart';
