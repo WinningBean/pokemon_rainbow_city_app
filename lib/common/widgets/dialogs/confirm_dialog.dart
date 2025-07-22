@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
@@ -8,14 +9,16 @@ class ConfirmDialog extends StatelessWidget {
   const ConfirmDialog({
     super.key,
     required this.title,
-    required this.content,
+    this.contenText,
+    this.customContent,
     required this.onConfirm,
     this.onCancel,
     this.confirmText,
     this.cancelText,
   });
   final String title;
-  final String content;
+  final String? contenText;
+  final Widget? customContent;
   final VoidCallback onConfirm;
   final VoidCallback? onCancel;
   final String? confirmText;
@@ -26,18 +29,30 @@ class ConfirmDialog extends StatelessWidget {
     final local = AppLocalizations.of(context)!;
 
     return CupertinoAlertDialog(
-      title: Text(title),
-      content: Text(content),
+      title: Text(title, style: Theme.of(context).textTheme.titleSmall),
+      content:
+          customContent ??
+          (contenText == null
+              ? null
+              : Text(contenText!, style: Theme.of(context).textTheme.bodySmall)),
       actions: [
         CupertinoDialogAction(
           isDestructiveAction: true,
           onPressed: onCancel ?? () => context.pop(),
-          child: Text(cancelText ?? local.cancelText),
+          child: Text(
+            cancelText ?? local.cancelText,
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
         ),
         CupertinoDialogAction(
           isDefaultAction: true,
           onPressed: onConfirm,
-          child: Text(confirmText ?? local.confirmText),
+          child: Text(
+            confirmText ?? local.confirmText,
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.primary),
+          ),
         ),
       ],
     );

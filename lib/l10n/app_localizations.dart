@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Pokkémon Rainbow City'**
+  /// **'Pokémon Rainbow City'**
   String get appTitle;
 
   /// No description provided for @confirmText.
@@ -181,48 +181,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No Pokémon available'**
   String get goodsEmptyText;
-
-  /// No description provided for @goodsUnselected.
-  ///
-  /// In en, this message translates to:
-  /// **'No item selected'**
-  String get goodsUnselected;
-
-  /// No description provided for @putGoodsCartText.
-  ///
-  /// In en, this message translates to:
-  /// **'Do you want to add it to the cart?'**
-  String get putGoodsCartText;
-
-  /// No description provided for @description.
-  ///
-  /// In en, this message translates to:
-  /// **'This message appears when no item is selected.'**
-  String get description;
-
-  /// No description provided for @detailTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Pokémon Details'**
-  String get detailTitle;
-
-  /// No description provided for @goodsPriceLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Price'**
-  String get goodsPriceLabel;
-
-  /// No description provided for @goodsBuyButton.
-  ///
-  /// In en, this message translates to:
-  /// **'Buy Now'**
-  String get goodsBuyButton;
-
-  /// No description provided for @goodsCartButton.
-  ///
-  /// In en, this message translates to:
-  /// **'Add to Cart'**
-  String get goodsCartButton;
 
   /// No description provided for @cartTitle.
   ///
@@ -439,6 +397,76 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Retry'**
   String get retryText;
+
+  /// No description provided for @itemNotFoundText.
+  ///
+  /// In en, this message translates to:
+  /// **'Item does not exist.'**
+  String get itemNotFoundText;
+
+  /// No description provided for @itemCartButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Cart'**
+  String get itemCartButton;
+
+  /// No description provided for @itemCartAddedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The item has been added to the cart.'**
+  String get itemCartAddedTitle;
+
+  /// No description provided for @itemCartDialogDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Would you like to go to your cart?'**
+  String get itemCartDialogDesc;
+
+  /// No description provided for @itemMoreBrowse.
+  ///
+  /// In en, this message translates to:
+  /// **'Browse more'**
+  String get itemMoreBrowse;
+
+  /// No description provided for @itemGoToCart.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to cart'**
+  String get itemGoToCart;
+
+  /// No description provided for @itemBuyButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy'**
+  String get itemBuyButton;
+
+  /// Purchase confirmation message. {itemName} is the name of the item, {totalPrice} is the price, and {currency} is the currency symbol.
+  ///
+  /// In en, this message translates to:
+  /// **'You have purchased {itemName} for {totalPrice}{currency}.'**
+  String itemBuyComplete({
+    required String itemName,
+    required String totalPrice,
+    required String currency,
+  });
+
+  /// No description provided for @quantityInputTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Quantity'**
+  String get quantityInputTitle;
+
+  /// Error message for quantity input. {maxCount} is the maximum quantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Only numbers between 1 and {maxCount} are allowed.'**
+  String quantityInputError({required int maxCount});
+
+  /// No description provided for @itemRemainingCountLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Remaining quantity:'**
+  String get itemRemainingCountLabel;
 }
 
 class _AppLocalizationsDelegate

@@ -51,27 +51,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get goodsEmptyText => '등록된 포켓몬이 없습니다.';
 
   @override
-  String get goodsUnselected => '선택 안 됨';
-
-  @override
-  String get putGoodsCartText => '장바구니에 담으시겠습니까?';
-
-  @override
-  String get description => '사용자가 상품을 않았을 때 표시 되는 경고 메시지 입니다.';
-
-  @override
-  String get detailTitle => '포켓몬 정보';
-
-  @override
-  String get goodsPriceLabel => '가격';
-
-  @override
-  String get goodsBuyButton => '바로 구매';
-
-  @override
-  String get goodsCartButton => '장바구니에 담기';
-
-  @override
   String get cartTitle => '장바구니';
 
   @override
@@ -178,4 +157,45 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get retryText => '다시 시도';
+
+  @override
+  String get itemNotFoundText => '상품이 존재하지 않습니다.';
+
+  @override
+  String get itemCartButton => '장바구니에 넣기';
+
+  @override
+  String get itemCartAddedTitle => '상품이 장바구니에 담겼습니다.';
+
+  @override
+  String get itemCartDialogDesc => '장바구니로 이동하시겠습니까?';
+
+  @override
+  String get itemMoreBrowse => '더 둘러보기';
+
+  @override
+  String get itemGoToCart => '장바구니가기';
+
+  @override
+  String get itemBuyButton => '구매하기';
+
+  @override
+  String itemBuyComplete({
+    required String itemName,
+    required String totalPrice,
+    required String currency,
+  }) {
+    return '$itemName을(를) $totalPrice$currency 만큼 구매하셨습니다.';
+  }
+
+  @override
+  String get quantityInputTitle => '수량 입력';
+
+  @override
+  String quantityInputError({required int maxCount}) {
+    return '1부터 $maxCount 사이의 숫자만 입력할 수 있습니다.';
+  }
+
+  @override
+  String get itemRemainingCountLabel => '남은 수량 :';
 }

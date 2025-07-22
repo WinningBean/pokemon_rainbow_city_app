@@ -20,9 +20,15 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(itemName, totalPrice, currency) =>
+      "You have purchased ${itemName} for ${totalPrice}${currency}.";
+
+  static String m1(maxCount) =>
+      "Only numbers between 1 and ${maxCount} are allowed.";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "appTitle": MessageLookupByLibrary.simpleMessage("Pokkémon Rainbow City"),
+    "appTitle": MessageLookupByLibrary.simpleMessage("Pokémon Rainbow City"),
     "backText": MessageLookupByLibrary.simpleMessage("Back"),
     "cancelButton": MessageLookupByLibrary.simpleMessage("Cancel"),
     "cancelText": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -51,29 +57,38 @@ class MessageLookup extends MessageLookupByLibrary {
       "Do you want to proceed with recharge?",
     ),
     "confirmText": MessageLookupByLibrary.simpleMessage("Confirm"),
-    "description": MessageLookupByLibrary.simpleMessage(
-      "This message appears when no item is selected.",
-    ),
-    "detailTitle": MessageLookupByLibrary.simpleMessage("Pokémon Details"),
     "fieldRequiredError": MessageLookupByLibrary.simpleMessage(
       "Please fill out all fields.",
     ),
-    "goodsBuyButton": MessageLookupByLibrary.simpleMessage("Buy Now"),
-    "goodsCartButton": MessageLookupByLibrary.simpleMessage("Add to Cart"),
     "goodsEmptyText": MessageLookupByLibrary.simpleMessage(
       "No Pokémon available",
     ),
     "goodsListTitle": MessageLookupByLibrary.simpleMessage("Pokémon List"),
-    "goodsPriceLabel": MessageLookupByLibrary.simpleMessage("Price"),
     "goodsRegistration": MessageLookupByLibrary.simpleMessage(
       "Do you want to register a Pokémon?",
     ),
     "goodsSearchHint": MessageLookupByLibrary.simpleMessage(
       "Search by Pokémon name.",
     ),
-    "goodsUnselected": MessageLookupByLibrary.simpleMessage("No item selected"),
     "insufficientFunds": MessageLookupByLibrary.simpleMessage(
       "Insufficient balance",
+    ),
+    "itemBuyButton": MessageLookupByLibrary.simpleMessage("Buy"),
+    "itemBuyComplete": m0,
+    "itemCartAddedTitle": MessageLookupByLibrary.simpleMessage(
+      "The item has been added to the cart.",
+    ),
+    "itemCartButton": MessageLookupByLibrary.simpleMessage("Add to Cart"),
+    "itemCartDialogDesc": MessageLookupByLibrary.simpleMessage(
+      "Would you like to go to your cart?",
+    ),
+    "itemGoToCart": MessageLookupByLibrary.simpleMessage("Go to cart"),
+    "itemMoreBrowse": MessageLookupByLibrary.simpleMessage("Browse more"),
+    "itemNotFoundText": MessageLookupByLibrary.simpleMessage(
+      "Item does not exist.",
+    ),
+    "itemRemainingCountLabel": MessageLookupByLibrary.simpleMessage(
+      "Remaining quantity:",
     ),
     "loadingText": MessageLookupByLibrary.simpleMessage("Loading..."),
     "mainGoToShop": MessageLookupByLibrary.simpleMessage("Go to Pokémon Shop"),
@@ -100,8 +115,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "priceInputHint": MessageLookupByLibrary.simpleMessage(
       "Enter numbers only.",
     ),
-    "putGoodsCartText": MessageLookupByLibrary.simpleMessage(
-      "Do you want to add it to the cart?",
+    "quantityInputError": m1,
+    "quantityInputTitle": MessageLookupByLibrary.simpleMessage(
+      "Enter Quantity",
     ),
     "rechargeAmount": MessageLookupByLibrary.simpleMessage(
       "Select amount to recharge",

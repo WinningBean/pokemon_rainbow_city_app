@@ -54,10 +54,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Pokkémon Rainbow City`
+  /// `Pokémon Rainbow City`
   String get appTitle {
     return Intl.message(
-      'Pokkémon Rainbow City',
+      'Pokémon Rainbow City',
       name: 'appTitle',
       desc: '',
       args: [],
@@ -159,66 +159,6 @@ class S {
     return Intl.message(
       'No Pokémon available',
       name: 'goodsEmptyText',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `No item selected`
-  String get goodsUnselected {
-    return Intl.message(
-      'No item selected',
-      name: 'goodsUnselected',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Do you want to add it to the cart?`
-  String get putGoodsCartText {
-    return Intl.message(
-      'Do you want to add it to the cart?',
-      name: 'putGoodsCartText',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `This message appears when no item is selected.`
-  String get description {
-    return Intl.message(
-      'This message appears when no item is selected.',
-      name: 'description',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Pokémon Details`
-  String get detailTitle {
-    return Intl.message(
-      'Pokémon Details',
-      name: 'detailTitle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Price`
-  String get goodsPriceLabel {
-    return Intl.message('Price', name: 'goodsPriceLabel', desc: '', args: []);
-  }
-
-  /// `Buy Now`
-  String get goodsBuyButton {
-    return Intl.message('Buy Now', name: 'goodsBuyButton', desc: '', args: []);
-  }
-
-  /// `Add to Cart`
-  String get goodsCartButton {
-    return Intl.message(
-      'Add to Cart',
-      name: 'goodsCartButton',
       desc: '',
       args: [],
     );
@@ -532,6 +472,108 @@ class S {
   /// `Retry`
   String get retryText {
     return Intl.message('Retry', name: 'retryText', desc: '', args: []);
+  }
+
+  /// `Item does not exist.`
+  String get itemNotFoundText {
+    return Intl.message(
+      'Item does not exist.',
+      name: 'itemNotFoundText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to Cart`
+  String get itemCartButton {
+    return Intl.message(
+      'Add to Cart',
+      name: 'itemCartButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The item has been added to the cart.`
+  String get itemCartAddedTitle {
+    return Intl.message(
+      'The item has been added to the cart.',
+      name: 'itemCartAddedTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Would you like to go to your cart?`
+  String get itemCartDialogDesc {
+    return Intl.message(
+      'Would you like to go to your cart?',
+      name: 'itemCartDialogDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Browse more`
+  String get itemMoreBrowse {
+    return Intl.message(
+      'Browse more',
+      name: 'itemMoreBrowse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go to cart`
+  String get itemGoToCart {
+    return Intl.message('Go to cart', name: 'itemGoToCart', desc: '', args: []);
+  }
+
+  /// `Buy`
+  String get itemBuyButton {
+    return Intl.message('Buy', name: 'itemBuyButton', desc: '', args: []);
+  }
+
+  /// `You have purchased {itemName} for {totalPrice}{currency}.`
+  String itemBuyComplete(String itemName, String totalPrice, String currency) {
+    return Intl.message(
+      'You have purchased $itemName for $totalPrice$currency.',
+      name: 'itemBuyComplete',
+      desc:
+          'Purchase confirmation message. {itemName} is the name of the item, {totalPrice} is the price, and {currency} is the currency symbol.',
+      args: [itemName, totalPrice, currency],
+    );
+  }
+
+  /// `Enter Quantity`
+  String get quantityInputTitle {
+    return Intl.message(
+      'Enter Quantity',
+      name: 'quantityInputTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Only numbers between 1 and {maxCount} are allowed.`
+  String quantityInputError(int maxCount) {
+    return Intl.message(
+      'Only numbers between 1 and $maxCount are allowed.',
+      name: 'quantityInputError',
+      desc:
+          'Error message for quantity input. {maxCount} is the maximum quantity.',
+      args: [maxCount],
+    );
+  }
+
+  /// `Remaining quantity:`
+  String get itemRemainingCountLabel {
+    return Intl.message(
+      'Remaining quantity:',
+      name: 'itemRemainingCountLabel',
+      desc: '',
+      args: [],
+    );
   }
 }
 

@@ -4,7 +4,7 @@ import 'package:pokemon_rainbow_city_app/common/widgets/base_app_bar.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/button/app_filled_button.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/button/app_floating_action_button.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/button/app_outlined_button.dart';
-import 'package:pokemon_rainbow_city_app/common/helpers/ui_helpers.dart';
+import 'package:pokemon_rainbow_city_app/common/utils/layout_utils.dart';
 import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
 import 'package:pokemon_rainbow_city_app/core/navigation/route_names.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
                 AppOutlinedButton(
                   text: 'itemDetailPage',
                   onChanged: () {
-                    context.pushNamed(RouteNames.itemDetail, pathParameters: {'id': '123'});
+                    context.pushNamed(RouteNames.itemDetail, pathParameters: {'id': '4'});
                   },
                 ),
                 AppFloatingActionButton(
