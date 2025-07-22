@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appTitle": "Pokkémon Rainbow City",
+  "appTitle": "Pokémon Rainbow City",
   "confirmText": "Confirm",
   "cancelText": "Cancel",
   "backText": "Back",
@@ -14,13 +14,6 @@
   "goodsListTitle": "Pokémon List",
   "goodsSearchHint": "Search by Pokémon name.",
   "goodsEmptyText": "No Pokémon available",
-  "goodsUnselected": "No item selected",
-  "putGoodsCartText": "Do you want to add it to the cart?",
-  "description": "This message appears when no item is selected.",
-  "detailTitle": "Pokémon Details",
-  "goodsPriceLabel": "Price",
-  "goodsBuyButton": "Buy Now",
-  "goodsCartButton": "Add to Cart",
   "cartTitle": "Cart",
   "cartEmptyText": "Your cart is empty.",
   "cartTotalLabel": "Total",
@@ -58,5 +51,42 @@
   "unknownErrorText": "An unknown error occurred.",
   "retryText": "Retry",
   "onboardingText": "Shall we go buy some Pokémon before we start our journey?",
-  "goToShop": "Go buy Pokémon"
+  "goToShop": "Go buy Pokémon",
+  "itemNotFoundText": "Item does not exist.",
+  "itemCartButton": "Add to Cart",
+  "itemCartAddedTitle": "The item has been added to the cart.",
+  "itemCartDialogDesc": "Would you like to go to your cart?",
+  "itemMoreBrowse": "Browse more",
+  "itemGoToCart": "Go to cart",
+  "itemBuyButton": "Buy",
+  "itemBuyComplete": "You have purchased {itemName} for {totalPrice}{currency}.",
+  "@itemBuyComplete": {
+    "description": "Purchase confirmation message. {itemName} is the name of the item, {totalPrice} is the price, and {currency} is the currency symbol.",
+    "placeholders": {
+      "itemName": {
+        "type": "String",
+        "example": "Pikachu"
+      },
+      "totalPrice": {
+        "type": "String",
+        "example": "3,000"
+      },
+      "currency": {
+        "type": "String",
+        "example": "$"
+      }
+    }
+  },
+  "quantityInputTitle": "Enter Quantity",
+  "quantityInputError": "Only numbers between 1 and {maxCount} are allowed.",
+  "@quantityInputError": {
+    "description": "Error message for quantity input. {maxCount} is the maximum quantity.",
+    "placeholders": {
+      "maxCount": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "itemRemainingCountLabel": "Remaining quantity:"
 }

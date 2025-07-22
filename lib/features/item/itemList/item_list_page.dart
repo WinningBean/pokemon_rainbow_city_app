@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/base_app_bar.dart';
-import 'package:pokemon_rainbow_city_app/features/item/providers/item_providers.dart';
+import 'package:pokemon_rainbow_city_app/features/item/providers/item_provider.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
 class ItemListPage extends ConsumerWidget {
