@@ -4,7 +4,7 @@ import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
 /// 검색 중일 때 사용하는 AppBar
-class SearchBaseAppBar extends StatelessWidget implements PreferredSizeWidget {
+class SearchBaseAppBar extends StatefulWidget implements PreferredSizeWidget {
   final List<Widget>? actions;
   final bool automaticallyImplyLeading;
   final double contentPadding;
@@ -12,6 +12,7 @@ class SearchBaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   final EdgeInsets? outerPadding;
   final String? hintText;
   final VoidCallback? onTapOutside;
+  final ValueChanged<String>? onSearch;
 
   const SearchBaseAppBar({
     super.key,
@@ -22,10 +23,36 @@ class SearchBaseAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.outerPadding,
     this.hintText,
     this.onTapOutside,
+    this.onSearch,
   });
 
   @override
   Size get preferredSize => const Size.fromHeight(54.0);
+
+  @override
+  State<SearchBaseAppBar> createState() => _SearchBaseAppBarState();
+}
+
+class _SearchBaseAppBarState extends State<SearchBaseAppBar> {
+  final TextEditingController _controller = TextEditingController();
+  final FocusNode _focusNode = FocusNode(); // 추가
+  bool _showHintErrorColor = false;
+
+  void _handleSearch() {
+    final value = _controller.text.trim();
+    if (value.isEmpty) {
+      setState(() {
+        _showHintErrorColor = true;
+      });
+      _focusNode.requestFocus(); // 포커스 유지
+    } else {
+      setState(() {
+        _showHintErrorColor = false;
+      });
+      FocusScope.of(context).unfocus(); // 키보드 닫기
+      widget.onSearch?.call(value);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,27 +60,37 @@ class SearchBaseAppBar extends StatelessWidget implements PreferredSizeWidget {
 
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
-      onTap: onTapOutside,
+      onTap: widget.onTapOutside,
       child: BaseAppBar(
-        automaticallyImplyLeading: automaticallyImplyLeading,
-        contentPadding: contentPadding,
-        outerPadding: outerPadding,
+        automaticallyImplyLeading: widget.automaticallyImplyLeading,
+        contentPadding: widget.contentPadding,
+        outerPadding: widget.outerPadding,
         title: TextField(
+          controller: _controller,
+          focusNode: _focusNode, // 연결
+          autofocus: true,
+          textInputAction: TextInputAction.search,
+          onSubmitted: (_) => _handleSearch(),
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
-            hintText: hintText ?? local.searchHintText,
+            hintText: widget.hintText ?? local.searchHintText,
             hintStyle: Theme.of(context).textTheme.labelSmall?.copyWith(
-              color: Theme.of(context).colorScheme.surfaceContainerHighest,
+              color: _showHintErrorColor
+                  ? Theme.of(context).colorScheme.error
+                  : Theme.of(context).colorScheme.surfaceContainerHighest,
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(100),
               borderSide: BorderSide(width: 1, color: Theme.of(context).colorScheme.outline),
             ),
-            suffixIcon: const Icon(CustomIcons.search, size: 24),
+            suffixIcon: IconButton(
+              icon: const Icon(CustomIcons.search, size: 24),
+              onPressed: _handleSearch,
+            ),
           ),
         ),
-        actions: actions,
-        backgroundColor: backgroundColor,
+        actions: widget.actions,
+        backgroundColor: widget.backgroundColor,
       ),
     );
   }

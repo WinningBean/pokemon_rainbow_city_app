@@ -6,8 +6,8 @@ import 'package:pokemon_rainbow_city_app/features/item/itemAdd/wigets/label_text
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
 /// 아이템 추가 페이지
-class ItemAddlPage extends StatelessWidget {
-  const ItemAddlPage({super.key});
+class ItemAddPage extends StatelessWidget {
+  const ItemAddPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -12,7 +12,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       name: RouteNames.itemAdd,
       path: '/item/add',
-      builder: (context, state) => const ItemAddlPage(),
+      builder: (context, state) => const ItemAddPage(),
     ),
     GoRoute(
       name: RouteNames.itemList,
