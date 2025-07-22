@@ -590,6 +590,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No items available.`
+  String get itemListEmptyText {
+    return Intl.message(
+      'No items available.',
+      name: 'itemListEmptyText',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

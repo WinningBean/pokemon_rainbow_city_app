@@ -479,6 +479,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Remaining quantity:'**
   String get itemRemainingCountLabel;
+
+  /// No description provided for @itemListEmptyText.
+  ///
+  /// In en, this message translates to:
+  /// **'No items available.'**
+  String get itemListEmptyText;
 }
 
 class _AppLocalizationsDelegate

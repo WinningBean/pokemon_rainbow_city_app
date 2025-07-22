@@ -84,6 +84,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Would you like to go to your cart?",
     ),
     "itemGoToCart": MessageLookupByLibrary.simpleMessage("Go to cart"),
+    "itemListEmptyText": MessageLookupByLibrary.simpleMessage(
+      "No items available.",
+    ),
     "itemMoreBrowse": MessageLookupByLibrary.simpleMessage("Browse more"),
     "itemNotFoundText": MessageLookupByLibrary.simpleMessage(
       "Item does not exist.",

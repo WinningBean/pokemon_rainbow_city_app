@@ -205,4 +205,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get itemRemainingCountLabel => 'Remaining quantity:';
+
+  @override
+  String get itemListEmptyText => 'No items available.';
 }

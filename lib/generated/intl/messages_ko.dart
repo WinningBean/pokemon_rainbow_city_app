@@ -67,6 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "장바구니로 이동하시겠습니까?",
     ),
     "itemGoToCart": MessageLookupByLibrary.simpleMessage("장바구니가기"),
+    "itemListEmptyText": MessageLookupByLibrary.simpleMessage("상품 목록이 없습니다."),
     "itemMoreBrowse": MessageLookupByLibrary.simpleMessage("더 둘러보기"),
     "itemNotFoundText": MessageLookupByLibrary.simpleMessage("상품이 존재하지 않습니다."),
     "itemRemainingCountLabel": MessageLookupByLibrary.simpleMessage("남은 수량 :"),

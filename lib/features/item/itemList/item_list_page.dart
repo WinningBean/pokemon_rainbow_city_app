@@ -8,6 +8,7 @@ import 'package:pokemon_rainbow_city_app/core/navigation/route_names.dart';
 import 'package:pokemon_rainbow_city_app/features/item/models/item.dart';
 import 'package:pokemon_rainbow_city_app/features/item/providers/item_provider.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemList/widgets/item_list_card.dart';
+import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
 /// 상품 목록 페이지
 /// 상품 목록을 표시하며, 상품 추가 버튼이 포함되어 있습니다.
@@ -16,6 +17,7 @@ class ItemListPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final local = AppLocalizations.of(context)!;
     final items = ref.watch(itemListProvider); // 상품 목록 가져오기
 
     return Scaffold(
@@ -25,7 +27,9 @@ class ItemListPage extends ConsumerWidget {
       // 상품 목록이 비어있을 경우 안내 메시지 표시
       // 상품이 있을 경우 상품 목록을 표시합니다.
       body: items.isEmpty
-          ? Center(child: Text('상품 목록이 없습니다.', style: Theme.of(context).textTheme.bodyMedium))
+          ? Center(
+              child: Text(local.itemListEmptyText, style: Theme.of(context).textTheme.bodyMedium),
+            )
           : _buildItemList(items), // 상품 목록 빌드 함수 호출
       floatingActionButton: AppFloatingActionButton(
         icon: Icons.add,
