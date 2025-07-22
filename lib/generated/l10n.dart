@@ -432,6 +432,16 @@ class S {
   String get itemRemainingCountLabel {
     return Intl.message('Remaining quantity:', name: 'itemRemainingCountLabel', desc: '', args: []);
   }
+
+  /// `No items available.`
+  String get itemListEmptyText {
+    return Intl.message(
+      'No items available.',
+      name: 'itemListEmptyText',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

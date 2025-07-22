@@ -88,5 +88,6 @@
       }
     }
   },
-  "itemRemainingCountLabel": "남은 수량 :"
+  "itemRemainingCountLabel": "남은 수량 :",
+  "itemListEmptyText": "상품 목록이 없습니다."
 }

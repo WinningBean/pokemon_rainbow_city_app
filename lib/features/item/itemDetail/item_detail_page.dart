@@ -37,27 +37,21 @@ class ItemDetailPage extends ConsumerWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
-                    child: LayoutBuilder(
-                      builder: (context, constraints) {
-                        return CachedNetworkImage(
-                          imageUrl: item.imageUrl,
-                          width: double.infinity,
-                          height: constraints.maxWidth,
-                          fit: BoxFit.cover,
-                          placeholder: (context, url) => Container(
-                            width: double.infinity,
-                            height: constraints.maxWidth,
-                            color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                            child: const Center(child: CircularProgressIndicator()),
-                          ),
-                          errorWidget: (context, url, error) => Container(
-                            width: double.infinity,
-                            height: constraints.maxWidth,
-                            color: Theme.of(context).colorScheme.error,
-                            child: const Center(child: Icon(Icons.error)),
-                          ),
-                        );
-                      },
+                    child: AspectRatio(
+                      aspectRatio: 1,
+                      child: CachedNetworkImage(
+                        imageUrl: item.imageUrl,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        placeholder: (context, url) => Container(
+                          color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                          child: const Center(child: CircularProgressIndicator()),
+                        ),
+                        errorWidget: (context, url, error) => Container(
+                          color: Theme.of(context).colorScheme.error,
+                          child: const Center(child: Icon(Icons.error)),
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 20),

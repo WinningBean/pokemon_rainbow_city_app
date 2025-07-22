@@ -204,4 +204,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get itemRemainingCountLabel => '남은 수량 :';
+
+  @override
+  String get itemListEmptyText => '상품 목록이 없습니다.';
 }

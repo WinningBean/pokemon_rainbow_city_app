@@ -88,5 +88,6 @@
       }
     }
   },
-  "itemRemainingCountLabel": "Remaining quantity:"
+  "itemRemainingCountLabel": "Remaining quantity:",
+  "itemListEmptyText": "No items available."
 }
