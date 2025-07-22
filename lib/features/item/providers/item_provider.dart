@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pokemon_rainbow_city_app/features/item/models/dummy_items.dart';
 import 'package:pokemon_rainbow_city_app/features/item/models/item.dart';
 
 /// 상품 목록
