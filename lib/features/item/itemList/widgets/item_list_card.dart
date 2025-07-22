@@ -6,6 +6,9 @@ import 'package:pokemon_rainbow_city_app/core/navigation/route_names.dart';
 import 'package:pokemon_rainbow_city_app/features/item/models/item.dart';
 import 'package:pokemon_rainbow_city_app/features/item/widgets/item_info_count_label.dart';
 
+/// 상품 목록 카드 위젯
+/// 상품의 이미지, 이름, 가격, 남은 수량을 표시합니다.
+/// 클릭 시 상품 상세 페이지로 이동합니다.
 class ItemListCard extends StatelessWidget {
   final Item item;
   const ItemListCard({super.key, required this.item});
@@ -16,6 +19,7 @@ class ItemListCard extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
+        // 상품 상세 페이지로 이동
         context.pushNamed(RouteNames.itemDetail, pathParameters: {'id': '${item.id}'});
       },
       child: Expanded(

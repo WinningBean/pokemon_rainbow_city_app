@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// 현재 선택된 수량을 관리하는 프로바이더
 /// 기본값은 1로 설정되어 있습니다.
+/// autoDispose를 사용하여 페이지가 닫힐 때 상태를 자동으로 정리합니다.
 final quantityProvider = StateProvider.autoDispose<int>((ref) => 1);
 
 /// 총 가격을 계산하는 프로바이더

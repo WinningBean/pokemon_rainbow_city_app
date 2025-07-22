@@ -286,7 +286,7 @@ final List<Item> dummyItems = [
         '흰 가운과 서류 파일, 그리고 상냥한 미소까지 정교하게 재현.\n'
         '주의사항: 피규어에게 말을 걸어도 연구에 도움은 되지 않습니다.',
     imageUrl:
-        'https://www.notion.so/image/attachment%3A325e03f1-4c01-4464-8997-48798389bf75%3Aimage.png?table=block&id=2382dc3e-f514-800e-a61b-cda494c53ac7&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1100&userId=&cache=v2',
+        'https://www.notion.so/image/attachment%3Aaaab8da6-64b2-4a7b-8702-0fd3b80e235a%3Aimage.png?table=block&id=2382dc3e-f514-8029-af0a-d0520af9ac15&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1420&userId=&cache=v2',
     count: 2,
     price: 47000,
   ),
