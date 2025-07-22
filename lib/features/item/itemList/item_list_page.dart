@@ -8,7 +8,6 @@ import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
 import 'package:pokemon_rainbow_city_app/core/navigation/route_names.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemList/providers/item_list_provider.dart';
 import 'package:pokemon_rainbow_city_app/features/item/models/item.dart';
-import 'package:pokemon_rainbow_city_app/features/item/providers/item_provider.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemList/widgets/item_list_card.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 
