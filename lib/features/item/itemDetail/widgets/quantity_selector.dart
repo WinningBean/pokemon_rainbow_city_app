@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pokemon_rainbow_city_app/common/widgets/button/counter_button.dart';
-import 'package:pokemon_rainbow_city_app/common/widgets/dialogs/confirm_dialog.dart';
+import 'package:pokemon_rainbow_city_app/common/widgets/dialog/confirm_dialog.dart';
 import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
-import 'package:pokemon_rainbow_city_app/common/widgets/dialogs/info_dialog.dart';
+import 'package:pokemon_rainbow_city_app/common/widgets/dialog/info_dialog.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemDetail/providers/item_detail_provider.dart';
 import 'package:pokemon_rainbow_city_app/l10n/app_localizations.dart';
 

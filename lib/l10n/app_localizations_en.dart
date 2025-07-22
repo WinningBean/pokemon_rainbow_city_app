@@ -208,4 +208,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get itemListEmptyText => 'No items available.';
+
+  @override
+  String get searchHintText => 'Enter search term.';
 }

@@ -28,7 +28,9 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -54,7 +56,12 @@ class S {
 
   /// `Pokémon Rainbow City`
   String get appTitle {
-    return Intl.message('Pokémon Rainbow City', name: 'appTitle', desc: '', args: []);
+    return Intl.message(
+      'Pokémon Rainbow City',
+      name: 'appTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Confirm`
@@ -89,17 +96,32 @@ class S {
 
   /// `Rainbow City Pokémon Market`
   String get mainTitle {
-    return Intl.message('Rainbow City Pokémon Market', name: 'mainTitle', desc: '', args: []);
+    return Intl.message(
+      'Rainbow City Pokémon Market',
+      name: 'mainTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Discover today's Pokémon!`
   String get mainSubtitle {
-    return Intl.message('Discover today\'s Pokémon!', name: 'mainSubtitle', desc: '', args: []);
+    return Intl.message(
+      'Discover today\'s Pokémon!',
+      name: 'mainSubtitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Go to Pokémon Shop`
   String get mainGoToShop {
-    return Intl.message('Go to Pokémon Shop', name: 'mainGoToShop', desc: '', args: []);
+    return Intl.message(
+      'Go to Pokémon Shop',
+      name: 'mainGoToShop',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Do you want to register a Pokémon?`
@@ -114,17 +136,32 @@ class S {
 
   /// `Pokémon List`
   String get goodsListTitle {
-    return Intl.message('Pokémon List', name: 'goodsListTitle', desc: '', args: []);
+    return Intl.message(
+      'Pokémon List',
+      name: 'goodsListTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Search by Pokémon name.`
   String get goodsSearchHint {
-    return Intl.message('Search by Pokémon name.', name: 'goodsSearchHint', desc: '', args: []);
+    return Intl.message(
+      'Search by Pokémon name.',
+      name: 'goodsSearchHint',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `No Pokémon available`
   String get goodsEmptyText {
-    return Intl.message('No Pokémon available', name: 'goodsEmptyText', desc: '', args: []);
+    return Intl.message(
+      'No Pokémon available',
+      name: 'goodsEmptyText',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Cart`
@@ -134,7 +171,12 @@ class S {
 
   /// `Your cart is empty.`
   String get cartEmptyText {
-    return Intl.message('Your cart is empty.', name: 'cartEmptyText', desc: '', args: []);
+    return Intl.message(
+      'Your cart is empty.',
+      name: 'cartEmptyText',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Total`
@@ -144,7 +186,12 @@ class S {
 
   /// `Checkout`
   String get cartCheckoutButton {
-    return Intl.message('Checkout', name: 'cartCheckoutButton', desc: '', args: []);
+    return Intl.message(
+      'Checkout',
+      name: 'cartCheckoutButton',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Remove`
@@ -154,7 +201,12 @@ class S {
 
   /// `Register Pokémon`
   String get registerPokemonTitle {
-    return Intl.message('Register Pokémon', name: 'registerPokemonTitle', desc: '', args: []);
+    return Intl.message(
+      'Register Pokémon',
+      name: 'registerPokemonTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Enter the details of your Pokémon`
@@ -169,7 +221,12 @@ class S {
 
   /// `Pokémon Name`
   String get pokemonNameLabel {
-    return Intl.message('Pokémon Name', name: 'pokemonNameLabel', desc: '', args: []);
+    return Intl.message(
+      'Pokémon Name',
+      name: 'pokemonNameLabel',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Type`
@@ -189,12 +246,22 @@ class S {
 
   /// `Description`
   String get pokemonDescriptionLabel {
-    return Intl.message('Description', name: 'pokemonDescriptionLabel', desc: '', args: []);
+    return Intl.message(
+      'Description',
+      name: 'pokemonDescriptionLabel',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Upload Image`
   String get pokemonUploadImage {
-    return Intl.message('Upload Image', name: 'pokemonUploadImage', desc: '', args: []);
+    return Intl.message(
+      'Upload Image',
+      name: 'pokemonUploadImage',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Submit`
@@ -229,7 +296,12 @@ class S {
 
   /// `Enter numbers only.`
   String get priceInputHint {
-    return Intl.message('Enter numbers only.', name: 'priceInputHint', desc: '', args: []);
+    return Intl.message(
+      'Enter numbers only.',
+      name: 'priceInputHint',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Pokémon has been successfully listed.`
@@ -244,17 +316,32 @@ class S {
 
   /// `Recharge Candy`
   String get candyRechargeTitle {
-    return Intl.message('Recharge Candy', name: 'candyRechargeTitle', desc: '', args: []);
+    return Intl.message(
+      'Recharge Candy',
+      name: 'candyRechargeTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Current Balance`
   String get candyBalance {
-    return Intl.message('Current Balance', name: 'candyBalance', desc: '', args: []);
+    return Intl.message(
+      'Current Balance',
+      name: 'candyBalance',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Select amount to recharge`
   String get rechargeAmount {
-    return Intl.message('Select amount to recharge', name: 'rechargeAmount', desc: '', args: []);
+    return Intl.message(
+      'Select amount to recharge',
+      name: 'rechargeAmount',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Recharge`
@@ -274,27 +361,52 @@ class S {
 
   /// `Recharge failed`
   String get rechargeFailed {
-    return Intl.message('Recharge failed', name: 'rechargeFailed', desc: '', args: []);
+    return Intl.message(
+      'Recharge failed',
+      name: 'rechargeFailed',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Insufficient balance`
   String get insufficientFunds {
-    return Intl.message('Insufficient balance', name: 'insufficientFunds', desc: '', args: []);
+    return Intl.message(
+      'Insufficient balance',
+      name: 'insufficientFunds',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Select Payment Method`
   String get selectPaymentMethod {
-    return Intl.message('Select Payment Method', name: 'selectPaymentMethod', desc: '', args: []);
+    return Intl.message(
+      'Select Payment Method',
+      name: 'selectPaymentMethod',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Payment completed`
   String get paymentSuccess {
-    return Intl.message('Payment completed', name: 'paymentSuccess', desc: '', args: []);
+    return Intl.message(
+      'Payment completed',
+      name: 'paymentSuccess',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Payment cancelled`
   String get paymentCancel {
-    return Intl.message('Payment cancelled', name: 'paymentCancel', desc: '', args: []);
+    return Intl.message(
+      'Payment cancelled',
+      name: 'paymentCancel',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Do you want to proceed with recharge?`
@@ -309,7 +421,12 @@ class S {
 
   /// `Purchase Complete!`
   String get checkoutSuccessTitle {
-    return Intl.message('Purchase Complete!', name: 'checkoutSuccessTitle', desc: '', args: []);
+    return Intl.message(
+      'Purchase Complete!',
+      name: 'checkoutSuccessTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Your Pokémon will be delivered soon.`
@@ -324,17 +441,32 @@ class S {
 
   /// `Return to Home`
   String get checkoutButtonHome {
-    return Intl.message('Return to Home', name: 'checkoutButtonHome', desc: '', args: []);
+    return Intl.message(
+      'Return to Home',
+      name: 'checkoutButtonHome',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `A network error occurred.`
   String get networkErrorText {
-    return Intl.message('A network error occurred.', name: 'networkErrorText', desc: '', args: []);
+    return Intl.message(
+      'A network error occurred.',
+      name: 'networkErrorText',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `An unknown error occurred.`
   String get unknownErrorText {
-    return Intl.message('An unknown error occurred.', name: 'unknownErrorText', desc: '', args: []);
+    return Intl.message(
+      'An unknown error occurred.',
+      name: 'unknownErrorText',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Retry`
@@ -359,12 +491,22 @@ class S {
 
   /// `Item does not exist.`
   String get itemNotFoundText {
-    return Intl.message('Item does not exist.', name: 'itemNotFoundText', desc: '', args: []);
+    return Intl.message(
+      'Item does not exist.',
+      name: 'itemNotFoundText',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Add to Cart`
   String get itemCartButton {
-    return Intl.message('Add to Cart', name: 'itemCartButton', desc: '', args: []);
+    return Intl.message(
+      'Add to Cart',
+      name: 'itemCartButton',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `The item has been added to the cart.`
@@ -389,7 +531,12 @@ class S {
 
   /// `Browse more`
   String get itemMoreBrowse {
-    return Intl.message('Browse more', name: 'itemMoreBrowse', desc: '', args: []);
+    return Intl.message(
+      'Browse more',
+      name: 'itemMoreBrowse',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Go to cart`
@@ -415,7 +562,12 @@ class S {
 
   /// `Enter Quantity`
   String get quantityInputTitle {
-    return Intl.message('Enter Quantity', name: 'quantityInputTitle', desc: '', args: []);
+    return Intl.message(
+      'Enter Quantity',
+      name: 'quantityInputTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Only numbers between 1 and {maxCount} are allowed.`
@@ -423,14 +575,20 @@ class S {
     return Intl.message(
       'Only numbers between 1 and $maxCount are allowed.',
       name: 'quantityInputError',
-      desc: 'Error message for quantity input. {maxCount} is the maximum quantity.',
+      desc:
+          'Error message for quantity input. {maxCount} is the maximum quantity.',
       args: [maxCount],
     );
   }
 
   /// `Remaining quantity:`
   String get itemRemainingCountLabel {
-    return Intl.message('Remaining quantity:', name: 'itemRemainingCountLabel', desc: '', args: []);
+    return Intl.message(
+      'Remaining quantity:',
+      name: 'itemRemainingCountLabel',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `No items available.`
@@ -438,6 +596,16 @@ class S {
     return Intl.message(
       'No items available.',
       name: 'itemListEmptyText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter search term.`
+  String get searchHintText {
+    return Intl.message(
+      'Enter search term.',
+      name: 'searchHintText',
       desc: '',
       args: [],
     );

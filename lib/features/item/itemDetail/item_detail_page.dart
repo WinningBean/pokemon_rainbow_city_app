@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:pokemon_rainbow_city_app/common/widgets/base_app_bar.dart';
+import 'package:pokemon_rainbow_city_app/common/widgets/appBar/base_app_bar.dart';
 import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemDetail/widgets/item_detail_bottom_bar.dart';
 import 'package:pokemon_rainbow_city_app/features/item/itemDetail/widgets/item_detail_info.dart';

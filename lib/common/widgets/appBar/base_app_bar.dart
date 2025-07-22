@@ -6,12 +6,13 @@ import 'package:pokemon_rainbow_city_app/core/icons/custom_icons.dart';
 /// 앱 전반에서 일관된 스타일을 제공하는 AppBar
 /// title, actions, leading 아이콘 등을 커스터마이즈할 수 있음
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String? title;
+  final Widget? title;
   final List<Widget>? actions;
   final bool centerTitle;
   final bool automaticallyImplyLeading;
   final double contentPadding;
   final Color? backgroundColor;
+  final EdgeInsets? outerPadding;
 
   const BaseAppBar({
     super.key,
@@ -21,12 +22,22 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.automaticallyImplyLeading = true,
     this.contentPadding = 16.0,
     this.backgroundColor,
+    this.outerPadding,
   });
 
   @override
+  Size get preferredSize => const Size.fromHeight(54.0);
+
+  @override
   Widget build(BuildContext context) {
+    return outerPadding == null
+        ? _buildAppBar(context)
+        : Padding(padding: outerPadding!, child: _buildAppBar(context));
+  }
+
+  AppBar _buildAppBar(BuildContext context) {
     return AppBar(
-      title: title != null ? Text(title!) : null,
+      title: title,
       actionsPadding: EdgeInsets.symmetric(horizontal: contentPadding),
       titleSpacing: contentPadding,
       centerTitle: centerTitle,
@@ -36,12 +47,9 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
           : null,
       actions: actions,
       backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.surface,
-      iconTheme: IconThemeData(size: 24.0),
+      iconTheme: const IconThemeData(size: 24.0),
       titleTextStyle: Theme.of(context).textTheme.titleLarge,
       elevation: 0,
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(54.0);
 }

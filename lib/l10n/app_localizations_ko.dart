@@ -207,4 +207,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get itemListEmptyText => '상품 목록이 없습니다.';
+
+  @override
+  String get searchHintText => '검색어를 입력해주세요.';
 }
