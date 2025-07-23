@@ -9,13 +9,24 @@ class LabeledTextBox extends StatelessWidget {
   final double height;
   final String? unit;
   final bool isNumber;
+  final TextEditingController? controller;
+  final TextStyle? hintTextStyle;
+  final TextAlign textAlign;
+  final List<TextInputFormatter>? inputFormatters;
+  final Color? borderColor;
 
   const LabeledTextBox({
+    super.key,
     required this.title,
     this.hintText,
     this.height = 48,
     this.unit,
     this.isNumber = false,
+    this.controller,
+    this.hintTextStyle,
+    this.textAlign = TextAlign.left,
+    this.inputFormatters,
+    this.borderColor,
   });
 
   @override
@@ -36,26 +47,32 @@ class LabeledTextBox extends StatelessWidget {
           height: height,
           width: double.infinity,
           decoration: BoxDecoration(
-            border: Border.all(color: AppColorAlias.foundationLine),
+            border: Border.all(color: borderColor ?? AppColorAlias.foundationLine),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Row(
             children: [
               Expanded(
                 child: TextField(
+                  controller: controller,
                   maxLines: isMultiLine ? null : 1,
                   expands: isMultiLine,
                   textAlignVertical: TextAlignVertical.top,
+                  textAlign: textAlign,
                   keyboardType: isNumber ? TextInputType.number : TextInputType.text,
-                  inputFormatters: isNumber ? [FilteringTextInputFormatter.digitsOnly] : [],
+                  inputFormatters:
+                      inputFormatters ??
+                      (isNumber ? [FilteringTextInputFormatter.digitsOnly] : null),
                   decoration: InputDecoration(
                     isCollapsed: true,
                     contentPadding: EdgeInsets.only(left: 16, top: isMultiLine ? 8 : 0),
                     border: InputBorder.none,
                     hintText: hintText,
-                    hintStyle: Theme.of(
-                      context,
-                    ).textTheme.labelSmall?.copyWith(color: AppColorAlias.foundationLine),
+                    hintStyle:
+                        hintTextStyle ??
+                        Theme.of(
+                          context,
+                        ).textTheme.labelSmall?.copyWith(color: AppColorAlias.foundationLine),
                   ),
                 ),
               ),
