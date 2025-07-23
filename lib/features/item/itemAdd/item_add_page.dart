@@ -155,14 +155,12 @@ class _ItemAddPageState extends ConsumerState<ItemAddPage> {
         ],
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Align(
           alignment: Alignment.topCenter,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 16),
-
               /// 점선 테두리 이미지 등록 박스 (3.1.0 기준)
               GestureDetector(
                 onTap: () {
